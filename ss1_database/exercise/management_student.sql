@@ -1,44 +1,86 @@
-drop database if exists student;
-create database student;
-use student;
-
--- tạo bảng student
-create table student(
- id int primary key,
-`name` varchar(50),
-age int,
-email varchar(50)
+drop database if exists student_management;
+create database student_management;
+use student_management;
+CREATE TABLE Class (
+    id INT,
+    `name` VARCHAR(50)
+);
+CREATE TABLE Student (
+    id INT,
+    `name` VARCHAR(55),
+    age TINYINT,
+    country VARCHAR(40)
 );
 
--- thêm mới --
-insert into student(id, `name`, age, email) value 	
-				(1,"Thanh Nguyen", 20,"thanh@gmail.com"),
-				(2,"Le Nguyen", 21,"thanh@gmail.com"),
-				(3,"Ngan Nguyen", 22,"thanh@gmail.com");
+alter table Class 
+add primary key (id);
 
--- tạo bảng class
-create table class(
- id int primary key,
-`name` varchar(50)
-);
+alter table class 
+change column `id` `id` int not null auto_increment;
 
-insert into class(id,`name`) value	(1,"duc vinh"),
-									(2,"xuan quynh"),
-									(3,"ngoc le"),
-									(4,"thi ngan");
+alter table class 
+change column `id` `id` int null, drop primary key;
 
--- tạo bảng teacher
-create table teacher(
- id int primary key,
-`name` varchar(50),
-age int,
-country varchar(50)
-);
+alter table class 
+add primary key (id), 
+change column `id` `id` int not null auto_increment;
 
-insert into teacher(id, `name`, age, country) value 	
-		(1,"ngoc quang", 18, "quang tri"),
-		(2,"ngoc le", 19, "ha noi"),
-		(3,"ngoc nguyen", 20, "tp. hcm"),
-		(4,"ngoc ngan", 22, "da nang");
+insert into class (`name`) 
+value ('C0422G1');
 
+insert into class (`name`) 
+value ('C0522G1');
 
+insert into class (`name`) 
+value ('C0622G1');
+
+insert into class (`name`)
+ value ('C0722G1');
+ 
+SELECT 
+    *
+FROM
+    class;
+
+DELETE FROM class 
+WHERE
+    `id` = 2;
+ 
+SELECT 
+    *
+FROM
+    class;
+
+set sql_safe_updates = 0;
+DELETE FROM class 
+WHERE
+    `name` = 'C0722G1';
+set sql_safe_updates = 1;
+
+SELECT 
+    *
+FROM
+    class;
+
+UPDATE class 
+SET 
+    `name` = 'C0722g1'
+WHERE
+    `id` = 1;
+
+SELECT 
+    *
+FROM
+    class;
+
+set sql_safe_updates = 0;
+UPDATE class 
+SET 
+    `name` = 'C0822g1'
+WHERE
+    `name` = 'C0622G1';
+set sql_safe_updates = 1;
+SELECT 
+    *
+FROM
+    class;

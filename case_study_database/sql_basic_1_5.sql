@@ -2,22 +2,14 @@ USE furama_resort;
 
 -- task2:
 -- Hiển thị thông tin của tất cả nhân viên có tên bắt đầu là một trong các ký tự “H”, “T” hoặc “K” và có tối đa 15 kí tự.
-SELECT 
-    *
-FROM
-    nhan_vien
-WHERE
-    ho_ten REGEXP '^[HTK]'
+SELECT * FROM nhan_vien
+WHERE ho_ten REGEXP '^[HTK]'
         AND char_length(ho_ten) <= 15;
 
 
 -- task3:
 -- Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”. 
-SELECT 
-    *
-FROM
-    khach_hang
-WHERE
+SELECT  * FROM khach_hang WHERE
     (YEAR(CURDATE()) - YEAR(ngay_sinh) - (RIGHT(CURDATE(), 5) < RIGHT(ngay_sinh, 5))) <= 50
         AND (YEAR(CURDATE()) - YEAR(ngay_sinh) - (RIGHT(CURDATE(), 5) < RIGHT(ngay_sinh, 5))) >= 18
         AND (dia_chi REGEXP 'Đà Nẵng$'

@@ -107,7 +107,7 @@ CREATE TABLE hop_dong (
     FOREIGN KEY (ma_khach_hang)
         REFERENCES khach_hang (ma_khach_hang) on delete cascade,
     FOREIGN KEY (ma_dich_vu)
-        REFERENCES dich_vu (ma_dich_vu)on delete cascade
+        REFERENCES dich_vu (ma_dich_vu) on delete cascade
 );
 
 CREATE TABLE hop_dong_chi_tiet (
@@ -116,7 +116,7 @@ CREATE TABLE hop_dong_chi_tiet (
     ma_hop_dong INT NOT NULL,
     ma_dich_vu_di_kem INT NOT NULL,
     FOREIGN KEY (ma_hop_dong)
-        REFERENCES hop_dong (ma_hop_dong)  on delete cascade,
+        REFERENCES hop_dong (ma_hop_dong)on delete cascade,
     FOREIGN KEY (ma_dich_vu_di_kem)
         REFERENCES dich_vu_di_kem (ma_dich_vu_di_kem) on delete cascade
 );
@@ -231,3 +231,4 @@ INSERT INTO hop_dong_chi_tiet (ma_hop_dong_chi_tiet, so_luong, ma_hop_dong, ma_d
 		('6', '1', '1', '3'),
 		('7', '2', '1', '2'),
 		('8', '2', '12', '2');
+
