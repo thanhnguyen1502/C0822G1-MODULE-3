@@ -16,6 +16,7 @@ public class User {
         this.country = country;
     }
 
+
     public User(String name, String email, String country) {
         this.name = name;
         this.email = email;

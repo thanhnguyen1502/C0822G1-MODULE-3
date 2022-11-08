@@ -11,6 +11,8 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <c:redirect url="/user">
+
+  </c:redirect>
   </body>
 </html>

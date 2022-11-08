@@ -9,46 +9,40 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class UserService implements IUserService {
-    private IUserRepository userRepository = new UserRepository();
-
+    private UserRepository userRepository = new UserRepository();
 
     @Override
-    public List<User> findAll() {
-        return userRepository.findAll();
+    public boolean insertUser(User user) throws SQLException {
+        return this.userRepository.insertUser(user);
     }
 
     @Override
-    public void addNewUser(User user) {
-        try {
-            userRepository.addNewUser(user);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+    public User selectUser(int id) {
+        return this.userRepository.selectUser(id);
     }
 
     @Override
-    public void editUser(User user) {
-        userRepository.editUser(user);
+    public List<User> selectAllUsers() {
+        return userRepository.selectAllUsers();
     }
 
     @Override
-    public void deleteUser(int id) throws SQLException {
-        userRepository.deleteUser(id);
+    public boolean deleteUser(int id) throws SQLException {
+        return userRepository.deleteUser(id);
     }
 
     @Override
-    public List<User> findByCountry(String country) {
-        return userRepository.findByCountry(country);
+    public boolean updateUser(User user) throws SQLException {
+        return this.userRepository.updateUser(user);
+    }
+
+    @Override
+    public List<User> selectByCountry(String country) {
+        return this.userRepository.selectByCountry(country);
     }
 
     @Override
     public List<User> sortByName() {
-        return userRepository.sortByName();
-    }
-
-
-    @Override
-    public User findById(int id) throws SQLException {
-        return userRepository.findById(id);
+        return this.userRepository.sortByName();
     }
 }

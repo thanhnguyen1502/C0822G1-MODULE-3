@@ -7,17 +7,17 @@ import java.util.List;
 
 public interface IUserRepository {
 
-    List<User> findAll();
+    boolean insertUser(User user) throws SQLException;
 
-    boolean addNewUser(User user) throws SQLException;
+    User selectUser(int id);
 
-    void editUser(User user);
+    List<User> selectAllUsers();
 
     boolean deleteUser(int id) throws SQLException;
 
-    List<User> findByCountry(String country);
+    boolean updateUser(User user) throws SQLException;
+
+    List<User> selectByCountry(String countrySearch);
 
     List<User> sortByName();
-
-    User findById(int id) throws SQLException;
 }
