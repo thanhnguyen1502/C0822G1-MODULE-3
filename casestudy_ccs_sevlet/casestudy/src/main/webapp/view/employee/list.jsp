@@ -6,277 +6,154 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <style>
-        .main {
-            background-image: url(https://furamavietnam.com/wp-content/uploads/2018/08/BG2.jpg) ;
-            background-position: right bottom;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-    </style>
+    <link rel="stylesheet" href="/common/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <%@ include file="/include/backgroud.jsp" %>
 </head>
 <body>
-<%@include file="/view/include/header.jsp"%>
-<div class="container-fluid">
-    <button style="position: fixed;right: 0" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addEmployeeModal" onclick="showModalAddControl('a','b','c')">
-        Thêm mới nhân viên
-    </button>
-    <h2 CLASS="text-center">DANH SÁCH NHÂN VIÊN</h2>
+<%@ include file="/include/header.jsp" %>
 
-    <div class="row main mt-2 ">
-        <table class="table table-striped">
-            <tr>
-                <th>STT</th>
-                <th>Họ tên</th>
-                <th>Ngày sinh</th>
-                <th>Số CMND </th>
-                <th>Số Điện Thoại</th>
-                <th>Email </th>
-                <th>Trình độ</th>
-                <th>Bộ phận</th>
-                <th>Vị trí</th>
-                <th>Lương</th>
-                <th>Hoạt động</th>
+<div class="row mt-5">
+    <div class="col-lg-3"></div>
+    <div style="background: #e9f2ef" class="col-lg-6 shadow-lg">
+        <h1 class="text-center">Create Facility Form</h1>
 
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-                <td>
+        <form action="/ServiceFurama?action=addNewFacility" method="post" class="mt-5">
 
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" onclick="showModalEditControl('a','b','c')">
-                        Sửa
-                    </button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteEmployeeModal" onclick="showModalDeleteControl('a','b','c')">
-                        Xóa
-                    </button>
-                </td>
-
-            </tr>
-        </table>
-
-    </div>
-
-</div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="addEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <form action="" method="">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">THÊM MỚI NHÂN VIÊN</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="mb-3" id="facilityType">
+                <div class="form-check-inline">
+                    <b>Choice Facility Type:</b>
                 </div>
-                <div class="modal-body container-fluid">
-
-                    <div class="container  mt-4 p-2 mb-4" style="border: 1px solid grey; border-radius: 15px">
-                        <form class="row g-3" action="" method="post">
-
-
-                            <div class="col-md-12">
-                                <label for="name" class="form-label">Họ tên</label>
-                                <input type="text" class="form-control" id="name" name="name">
-                            </div>
-                            <div class="col-md-12">
-                                <label for="birhtday" class="form-label">Ngày sinh </label>
-                                <input type="date" class="form-control" id="birhtday" name="birhtday">
-                            </div>
-                            <div class="col-md-12">
-                                <label for="id_card" class="form-label">Số CMND</label>
-                                <input type="text" class="form-control" id="id_card"  name="id_card" >
-                            </div>
-                            <div class="col-md-12">
-                                <label for="phone" class="form-label">Số Điện Thoại</label>
-                                <input type="text" class="form-control" id="phone" name="phone">
-                            </div>
-                            <div class="col-md-12 "  >
-                                <label for="email" class="form-label">Email </label>
-                                <input type="text" class="form-control" id="email" name="email">
-                            </div>
-
-                            <div class="col-md-12">
-                                <label class="form-label">Trình độ  </label>
-                                <select name="education_degree_id"  class="form-select" >
-                                    <option value="None" >Chọn loại trình độ</option>
-                                    <option value="1" >Trung cấp</option>
-                                    <option value="2" >Cao đẳng</option>
-                                    <option value="3" >Đại học </option>
-                                    <option value="4" >Sau đại học</option>
-
-                                </select>
-                            </div>
-
-                            <div class="col-md-12">
-                                <label class="form-label">Bộ phận</label>
-                                <select name="education_degree_id"  class="form-select" >
-                                    <option value="None" >Chọn bộ phận làm việc</option>
-                                    <option value="1" >Sale – Marketing</option>
-                                    <option value="2" >Hành Chính</option>
-                                    <option value="3" >Phục vụ </option>
-                                    <option value="4" >Quản lý</option>
-
-                                </select>
-                            </div>
-
-                            <div class="col-md-12">
-                                <label class="form-label">Vị trí </label>
-                                <select name="position_id"  class="form-select" >
-                                    <option value="None" >Chọn vị trí</option>
-                                    <option value="1" >Lễ tân</option>
-                                    <option value="2" >Phục vụ</option>
-                                    <option value="3" >Chuyên viên </option>
-                                    <option value="4" >Giám sát</option>
-                                    <option value="4" >Quản lý</option>
-                                    <option value="4" >Giám đốc</option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-12 "  >
-                                <label for="salary" class="form-label">Lương </label>
-                                <input type="text" class="form-control" id="salary" name="salary">
-                            </div>
-                            <div class="col-12  mt-2">
-                                <button type="submit" class="btn btn-primary">Gửi</button>
-                            </div>
-                        </form>
+                <c:if test="${message != null}">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                        </symbol>
+                        <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                        </symbol>
+                        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </symbol>
+                    </svg>
+                    <div class="alert alert-success d-flex align-items-center" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                        <div>
+                                ${message}
+                        </div>
                     </div>
+                </c:if>
+                <div class="form-check form-check-inline " onclick="displayForm(villa.value)">
+                    <input required class="form-check-input" type="radio" name="facilityType" id="villa" value="1">
+                    <label class="form-check-label" for="villa">Villa</label>
+                </div>
+                <div class="form-check form-check-inline" onclick="displayForm(house.value)">
+                    <input required class="form-check-input" type="radio" name="facilityType" id="house" value="2">
+                    <label class="form-check-label" for="house">House</label>
+                </div>
+                <div class="form-check form-check-inline" onclick="displayForm(room.value)">
+                    <input required class="form-check-input" type="radio" name="facilityType" id="room" value="3">
+                    <label class="form-check-label" for="room">Room</label>
                 </div>
             </div>
-        </form>
-    </div>
-</div>
 
-<div class="modal fade" id="editEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <form action="" method="">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalEditLable">SỬA THÔNG TIN NHÂN VIÊN</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body container-fluid">
-
-                    <div class="container  mt-4 p-2 mb-4" style="border: 1px solid grey; border-radius: 15px">
-                        <form class="row g-3" action="" method="post">
-
-
-                            <div class="col-md-12">
-                                <label for="name" class="form-label">Họ tên</label>
-                                <input type="text" class="form-control" id="nameEdit" name="name">
-                            </div>
-                            <div class="col-md-12">
-                                <label for="birhtday" class="form-label">Ngày sinh </label>
-                                <input type="date" class="form-control" id="birhtdayEdit" name="birhtday">
-                            </div>
-
-                            <div class="col-md-12">
-                                <label for="id_card" class="form-label">Số CMND</label>
-                                <input type="text" class="form-control" id="id_cardEdit"  name="id_card" >
-                            </div>
-                            <div class="col-md-12">
-                                <label for="phone" class="form-label">Số Điện Thoại</label>
-                                <input type="text" class="form-control" id="phoneEdit" name="phone">
-                            </div>
-                            <div class="col-md-12 " id="s1" >
-                                <label for="email" class="form-label">Email </label>
-                                <input type="text" class="form-control" id="emailEdit" name="email">
-                            </div>
-
-                            <div class="col-md-12">
-                                <label class="form-label">Trình độ  </label>
-                                <select name="education_degree_id"  class="form-select" >
-                                    <option value="None" >Chọn loại trình độ</option>
-                                    <option value="1" >Trung cấp</option>
-                                    <option value="2" >Cao đẳng</option>
-                                    <option value="3" >Đại học </option>
-                                    <option value="4" >Sau đại học</option>
-
-                                </select>
-                            </div>
-
-                            <div class="col-md-12">
-                                <label class="form-label">Bộ phận</label>
-                                <select name="education_degree_id"  class="form-select" >
-                                    <option value="None" >Chọn bộ phận làm việc</option>
-                                    <option value="1" >Sale – Marketing</option>
-                                    <option value="2" >Hành Chính</option>
-                                    <option value="3" >Phục vụ </option>
-                                    <option value="4" >Quản lý</option>
-
-                                </select>
-                            </div>
-
-                            <div class="col-md-12">
-                                <label class="form-label">Vị trí </label>
-                                <select name="position_id"  class="form-select" >
-                                    <option value="None" >Chọn vị trí</option>
-                                    <option value="1" >Lễ tân</option>
-                                    <option value="2" >Phục vụ</option>
-                                    <option value="3" >Chuyên viên </option>
-                                    <option value="4" >Giám sát</option>
-                                    <option value="4" >Quản lý</option>
-                                    <option value="4" >Giám đốc</option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-12 " id="s2" >
-                                <label for="salary" class="form-label">Lương </label>
-                                <input type="text" class="form-control" id="salaryEdit" name="salary">
-                            </div>
-                            <div class="col-12  mt-2">
-                                <button type="submit" class="btn btn-primary">Gửi</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div class="mb-3">
+                <label for="name" class="form-label"><b>Name:</b></label>
+                <input  type="text" name="name" id="name" class="form-control" >
             </div>
+
+            <div class="mb-3">
+                <label for="area" class="form-label"><b>Area:</b></label>
+                <input  type="number" name="area" class="form-control" id="area">
+            </div>
+
+            <div class="mb-3">
+                <label for="cost" class="form-label"><b>Cost:</b></label>
+                <input  type="number" name="cost" class="form-control" id="cost">
+            </div>
+
+            <div class="mb-3">
+                <label for="maxPeople" class="form-label"><b>Max People:</b></label>
+                <input  type="number" name="people" class="form-control" id="maxPeople">
+            </div>
+
+            <div class="mb-3">
+                <label for="rentType" class="form-label"><b>Rent Type:</b></label>
+                <select id="rentType" name="rentType" class="form-select" aria-label="Default select example">
+                    <option value="1">year</option>
+                    <option value="2">month</option>
+                    <option value="3">day</option>
+                    <option value="4">hour</option>
+                </select>
+            </div>
+
+            <div class="mb-3" id="opt1" style="display: none">
+                <label for="roomStandard" class="form-label"><b>Room Standard:</b></label>
+                <select id="roomStandard" name="standard" class="form-select" aria-label="Default select example">
+                    <option value="Normal">normal</option>
+                    <option value="Vip">vip</option>
+                </select>
+            </div>
+            <div class="mb-3" id="opt2" style="display: none">
+                <label for="poolArea" class="form-label"><b>Pool Area:</b></label>
+                <input  type="number" value="0" name="Pool" class="form-control" id="poolArea">
+            </div>
+            <div class="mb-3" id="opt3" style="display: none">
+                <label for="numberOfFloors" class="form-label"><b>Number Of Floors:</b></label>
+                <input  type="number" value="0" name="floors" class="form-control" id="numberOfFloors">
+            </div>
+            <div class="mb-3" id="opt4" style="display: none">
+                <label for="descriptionOtherConvenience" class="form-label"><b>Description Other Convenience:</b></label>
+                <input  type="text" name="convenience" class="form-control" id="descriptionOtherConvenience">
+            </div>
+
+            <div class="mb-3" id="opt5" style="display: none">
+                <label for="freeServiceIncluded" class="form-label"><b>Free Service Included:</b></label>
+                <input  type="text" name="free" class="form-control" id="freeServiceIncluded">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary mb-3">Add New</button>
+            </div>
+
+
         </form>
+
     </div>
+    <div class="col-lg-3"></div>
 </div>
 
-<div class="modal fade" id="deleteEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <form action="" method="">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLable">XÁC NHẬN XÓA</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body container-fluid">
-                    <span> </span>
-                    <button type="submit" class="btn btn-danger">Xóa</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
+<%@ include file="/include/footer.jsp" %>
 <script>
-    function showModalAddControl(a,b,c) {
-    }
-    function showModalAddControl(a,b,c) {
-    }
-    function showModalAddControl(a,b,c) {
+    function displayForm(value) {
+        switch (value) {
+            case "1":
+                document.getElementById("opt1").style.display = "block";
+                document.getElementById("opt2").style.display = "block";
+                document.getElementById("opt3").style.display = "block";
+                document.getElementById("opt4").style.display = "block";
+                document.getElementById("opt5").style.display = "none";
+                break;
+            case "2":
+                document.getElementById("opt1").style.display = "block";
+                document.getElementById("opt2").style.display = "none";
+                document.getElementById("opt3").style.display = "block";
+                document.getElementById("opt4").style.display = "block";
+                document.getElementById("opt5").style.display = "none";
+                break;
+            case "3":
+                document.getElementById("opt1").style.display = "none";
+                document.getElementById("opt2").style.display = "none";
+                document.getElementById("opt3").style.display = "none";
+                document.getElementById("opt4").style.display = "none";
+                document.getElementById("opt5").style.display = "block";
+                break;
+        }
     }
 </script>
-
-
-<%@include file="/view/include/footer.jsp"%>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
-<script src="/bootstrap/js/jquery-3.6.0.min.js"></script>
+<script src="/common/popper.min.js"></script>
+<script src="/common/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 </body>
 </html>

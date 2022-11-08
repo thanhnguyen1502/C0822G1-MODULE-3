@@ -6,111 +6,109 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <style>
-        p {
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="/common/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <%@ include file="/include/backgroud.jsp" %>
 </head>
 <body>
-<%@include file="/view/include/header.jsp"%>
+<%@ include file="/include/header.jsp" %>
 
-<div class="container w-50 mt-4 p-2 mb-4" style="border: 1px solid grey; border-radius: 15px">
-    <h3 align="center">SỬA THÔNG TIN KHÁCH HÀNG</h3>
-    <form class="row g-3" action="/customer?action=editCustomer&id=${pId}" method="post">
-        <%--        public Customer(String id, String name, LocalDate dayOfBirth, String gender, String personalCode, String phoneNumber, String email, String typeOfGuest, String address)--%>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-3"></div>
 
-        <div class="col-md-12">
-            <label for="name" class="form-label">Họ tên</label>
-            <input type="text" class="form-control" id="name" name="name" value="${customer.name}">
-            <c:if test="${name!=null}">
-                <p>${name}</p>
-            </c:if>
-        </div>
-        <div class="col-md-12">
-            <label for="birthday" class="form-label">Ngày sinh </label>
-            <input type="date" class="form-control" id="birthday" name="birthday" value="${customer.dayOfBirth}">
-            <c:if test="${dayOfBirth!=null}">
-                <p>${dayOfBirth}</p>
-            </c:if>
-        </div>
-        <div class="col-md-12">
-            <label  class="form-label me-4">Giới tính </label>
-            <c:if test="${customer.gender==null}">
-                <input type="radio"  class="form-check-input" name="gender" value="1" > Nam
-                <input type="radio" class="form-check-input" name="gender" value="0" >Nữ
-            </c:if>
-            <c:if test="${customer.gender=='1'}">
-                <input type="radio"  class="form-check-input" name="gender" value="1" checked> Nam
-                <input type="radio" class="form-check-input" name="gender" value="0" >Nữ
-            </c:if>
-            <c:if test="${customer.gender=='0'}">
-                <input type="radio"  class="form-check-input" name="gender" value="1" > Nam
-                <input type="radio" class="form-check-input" name="gender" value="0" checked>Nữ
-            </c:if>
+        <div style="background: #e9f2ef" class="col-lg-6 shadow-lg">
+            <form action="/CustomerFurama?action=updateCustomer&id=${customer.customerID}" method="post">
+                <div class="mb-5 mt-3 text-center">
+                    <h1>Edit Customer Form</h1>
+                </div>
 
-        </div>
-        <div class="col-md-12">
-            <label for="id_card" class="form-label">Số CMND</label>
-            <input type="text" class="form-control" id="id_card"  name="id_card" value="${customer.personalCode}" >
-            <c:if test="${personalCode!=null}">
-                <p>${personalCode}</p>
-            </c:if>
-        </div>
-        <div class="col-md-12">
-            <label for="phone" class="form-label">Số Điện Thoại</label>
-            <input type="text" class="form-control" id="phone" name="phone" value="${customer.phoneNumber}">
-            <c:if test="${phone!=null}">
-                <p>${phone}</p>
-            </c:if>
-        </div>
-        <div class="col-md-12 " id="s1" >
-            <label for="email" class="form-label">Email </label>
-            <input type="text" class="form-control" id="email" name="email" value="${customer.email}">
-            <c:if test="${email!=null}">
-                <p>${email}</p>
-            </c:if>
-        </div>
+                <c:if test="${message != null}">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                        </symbol>
+                        <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                        </symbol>
+                        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </symbol>
+                    </svg>
+                    <div class="alert alert-success d-flex align-items-center" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                        <div>
+                                ${message}
+                        </div>
+                    </div>
+                </c:if>
 
-        <div class="col-md-12">
-            <label class="form-label">Loại khách </label>
-            <select name="customer_type_id" id="mySelect" class="form-select" >
-                <option value="0" disabled >Chọn loại khách</option>
-                <c:forEach var="guestTypeList" items="${guestTypeList}">
-                    <c:choose>
-                        <c:when test="${customer.typeOfGuest==guestTypeList.guestTypeId}">
-                            <option value="${guestTypeList.guestTypeId}" selected>${guestTypeList.guestTypeName}</option>
-                        </c:when>
-                        <c:otherwise>
-                            <option value="${guestTypeList.guestTypeId}" >${guestTypeList.guestTypeName}</option>
-                        </c:otherwise>
-                    </c:choose>
-                </c:forEach>
-            </select >
+                <div class="mb-3">
+                    <label for="nameCustomer" class="form-label fw-bold">Name Customer:</label>
+                    <input required type="text" value="${customer.name}" class="form-control" name="nameCustomer" id="nameCustomer" aria-describedby="emailHelp">
+                </div>
 
+                <div class="mb-3">
+                    <label for="birthDayCustomer" class="form-label fw-bold">Birth Day:</label>
+                    <input required type="date" value="${customer.birthday}" class="form-control" name="birthDayCustomer" id="birthDayCustomer">
+                </div>
+
+                <div class="mb-3">
+                    <label for="genderCustomer" class="form-label fw-bold">Customer Type:</label>
+                    <select name="genderCustomer" id="genderCustomer" class="form-select" aria-label="Default select example">
+                        <c:if test="${customer.gender == false}">
+                            <option value="false">Nữ</option>
+                        </c:if>
+                        <c:if test="${customer.gender == true}">
+                            <option value="true">Nam</option>
+                        </c:if>
+                        <option value="false">Nữ</option>
+                        <option value="true">Nam</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="idCard" class="form-label fw-bold">Id Card:</label>
+                    <input required type="text" value="${customer.id}" class="form-control" name="idCard" id="idCard">
+                </div>
+
+                <div class="mb-3">
+                    <label for="phoneCustomer" class="form-label fw-bold">Phone:</label>
+                    <input required type="text" value="${customer.phoneNumber}" class="form-control" name="phoneCustomer" id="phoneCustomer">
+                </div>
+
+                <div class="mb-3">
+                    <label for="emailCustomer" class="form-label fw-bold">Email:</label>
+                    <input required type="email" value="${customer.email}" class="form-control" name="emailCustomer" id="emailCustomer">
+                </div>
+
+                <div class="mb-3">
+                    <label for="customerType" class="form-label fw-bold">Customer Type:</label>
+                    <select name="customerType" id="customerType" value="" class="form-select" aria-label="Default select example">
+                        <option value="${customer.getCustomerTypeId(customer.customerType)}">${customer.customerType}</option>
+                        <option value="1">Member</option>
+                        <option value="2">Silver</option>
+                        <option value="3">Gold</option>
+                        <option value="4">Platinum</option>
+                        <option value="5">Diamond</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label fw-bold">Address:</label>
+                    <input required type="text" value="${customer.address}" class="form-control" name="customerAddress" id="address">
+                </div>
+                <button type="submit" class="btn btn-primary">Update Now</button>
+            </form>
         </div>
-
-        <div class="col-md-12 " id="s2" >
-            <label for="address" class="form-label">Địa chỉ </label>
-            <input type="text" class="form-control" id="address" name="address" value="${customer.address}">
-        </div>
-
-
-        <div class="col-12 ">
-            <button type="submit" class="btn btn-primary">Gửi</button>
-        </div>
-    </form>
+        <div class="col-lg-3"></div>
+    </div>
 </div>
 
-<%@include file="/view/include/footer.jsp"%>
-
-
-
-<script src="/bootstrap/js/bootstrap.min.js"></script>
-<script src="/bootstrap/js/jquery-3.6.0.min.js"></script>
+<%@ include file="/include/footer.jsp" %>
+<script src="/common/popper.min.js"></script>
+<script src="/common/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 </body>
 </html>

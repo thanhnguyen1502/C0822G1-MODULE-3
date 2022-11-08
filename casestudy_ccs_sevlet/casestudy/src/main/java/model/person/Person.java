@@ -3,34 +3,23 @@ package model.person;
 import java.time.LocalDate;
 
 public abstract class Person {
-    private String pId; // mã khách hàng
     private String name;
-    private String dayOfBirth;
-    private String gender;
-    private String personalCode; // số chứn minh nhân dân
-    private  String phoneNumber;
-    private  String email;
+    private LocalDate birthday;
+    private boolean gender;
+    private String id;
+    private String phoneNumber;
+    private String email;
 
     public Person() {
     }
 
-    public Person(String pId, String name, String dayOfBirth,
-                  String gender, String personalCode, String phoneNumber, String email) {
-        this.pId = pId;
+    public Person(String name, LocalDate birthday, boolean gender, String id, String phoneNumber, String email) {
         this.name = name;
-        this.dayOfBirth = dayOfBirth;
+        this.birthday = birthday;
         this.gender = gender;
-        this.personalCode = personalCode;
+        this.id = id;
         this.phoneNumber = phoneNumber;
         this.email = email;
-    }
-
-    public String getpId() {
-        return pId;
-    }
-
-    public void setpId(String pId) {
-        this.pId = pId;
     }
 
     public String getName() {
@@ -41,28 +30,28 @@ public abstract class Person {
         this.name = name;
     }
 
-    public String getDayOfBirth() {
-        return dayOfBirth;
+    public LocalDate getBirthday() {
+        return birthday;
     }
 
-    public void setDayOfBirth(String dayOfBirth) {
-        this.dayOfBirth = dayOfBirth;
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
     }
 
-    public String getGender() {
+    public boolean getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(boolean gender) {
         this.gender = gender;
     }
 
-    public String getPersonalCode() {
-        return personalCode;
+    public String getId() {
+        return id;
     }
 
-    public void setPersonalCode(String personalCode) {
-        this.personalCode = personalCode;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getPhoneNumber() {
@@ -81,16 +70,4 @@ public abstract class Person {
         this.email = email;
     }
 
-    @Override
-    public String toString() {
-        return
-                "ID='" + pId + '\'' +
-                ", name='" + name + '\'' +
-                ", dayOfBirth='" + dayOfBirth + '\'' +
-                ", gender='" + gender + '\'' +
-                ", personalCode='" + personalCode + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
-                '}';
-    }
 }

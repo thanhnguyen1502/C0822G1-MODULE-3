@@ -16,10 +16,14 @@ SELECT
 FROM
     khach_hang
 WHERE
-    (YEAR(CURDATE()) - YEAR(ngay_sinh) - (RIGHT(CURDATE(), 5) < RIGHT(ngay_sinh, 5))) <= 50
-        AND (YEAR(CURDATE()) - YEAR(ngay_sinh) - (RIGHT(CURDATE(), 5) < RIGHT(ngay_sinh, 5))) >= 18
-        AND (dia_chi REGEXP 'Đà Nẵng$'
-        OR dia_chi REGEXP 'Quảng Trị$');
+--     (YEAR(CURDATE()) - YEAR(ngay_sinh) - (RIGHT(CURDATE(), 5) < RIGHT(ngay_sinh, 5))) <= 50
+--         AND (YEAR(CURDATE()) - YEAR(ngay_sinh) - (RIGHT(CURDATE(), 5) < RIGHT(ngay_sinh, 5))) >= 18
+--         AND (dia_chi REGEXP 'Đà Nẵng$'
+--         OR dia_chi REGEXP 'Quảng Trị$');
+
+	-- lấy số năm sinh của khách hàng đến thời đểm hiện tại trong khoảng 18-50
+   (TIMESTAMPDIFF(YEAR, ngay_sinh, NOW()) BETWEEN 18 AND 50)
+        AND dia_chi REGEXP ('Quảng trị|Đà Nẵng');
         
 
 -- task4:
@@ -55,7 +59,8 @@ SELECT
     dv.ten_dich_vu,
     hd.ngay_lam_hop_dong,
     hd.ngay_ket_thuc,
-    (dv.chi_phi_thue + sum(ifnull(hdct.so_luong*dvdk.gia,0))) as tong_tien
+      (IFNULL(dv.chi_phi_thue, 0) + IFNULL(SUM(IFNULL(hdct.so_luong, 0) * IFNULL(dvdk.gia, 0)),
+            0)) AS tong_tien
     from
      khach_hang kh
 	left join 
@@ -88,14 +93,15 @@ SELECT
     join
     hop_dong hd on dv.ma_dich_vu = hd.ma_dich_vu
     WHERE
-		dv.ma_dich_vu not in(
+		dv.ma_dich_vu not in(	-- đã từng
         select 
         hd.ma_dich_vu
 			FROM
 		hop_dong hd
         WHERE
-			(hd.ngay_lam_hop_dong BETWEEN '2021-01-01' AND '2021-03-31')
-			OR (hd.ngay_ket_thuc BETWEEN '2021-01-01' AND '2021-03-31'))
+				(hd.ngay_lam_hop_dong BETWEEN '2021-01-01' AND '2021-03-31')
+			OR 	(hd.ngay_ket_thuc BETWEEN '2021-01-01' AND '2021-03-31')
+            )
 GROUP BY hd.ma_dich_vu;
 	
 -- task 7.	Hiển thị thông tin ma_dich_vu, ten_dich_vu, dien_tich, so_nguoi_toi_da, chi_phi_thue, ten_loai_dich_vu của tất cả 
@@ -161,14 +167,14 @@ FROM
 -- task9:
 -- Thực hiện thống kê doanh thu theo tháng của năm 2021.
 SELECT 
-    MONTH(hd.ngay_lam_hop_dong) AS `thang`,
+    MONTH(hd.ngay_lam_hop_dong) AS thang,
     COUNT(MONTH(hd.ngay_lam_hop_dong)) AS so_luong_khach_hang
 FROM
     hop_dong hd
 WHERE
-    YEAR(hd.ngay_lam_hop_dong) = '2021'
-GROUP BY `thang`
-order by `thang`;
+    YEAR(hd.ngay_lam_hop_dong) = 2021
+GROUP BY  thang
+order by thang;
 
 -- task10:
 -- Hiển thị thông tin tương ứng với từng hợp đồng thì đã sử dụng bao nhiêu dịch vụ đi kèm.
@@ -266,13 +272,23 @@ from
 -- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. 
 -- Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung (được tính dựa trên việc count các ma_dich_vu_di_kem). 
     
-    select
-    hd.ma_hop_dong, 
-    dv.ten_loai_dich_vu, 
-    dvdk.ten_dich_vu_di_kem, 
-    count(dvdk.ma_dich_vu_di_kem) as so_lan_su_dung
-    from
-    hop_dong hd;
+ SELECT 
+    hd.ma_hop_dong,
+    ldv.ten_loai_dich_vu,
+    dvdk.ten_dich_vu_di_kem,
+    COUNT(hdct.ma_dich_vu_di_kem) AS so_lan_su_dung
+FROM
+    dich_vu dv
+        JOIN
+    loai_dich_vu ldv ON dv.ma_loai_dich_vu = ldv.ma_loai_dich_vu
+        JOIN
+    hop_dong hd ON dv.ma_dich_vu = hd.ma_dich_vu
+        JOIN
+    hop_dong_chi_tiet hdct ON hd.ma_hop_dong = hdct.ma_hop_dong
+        JOIN
+    dich_vu_di_kem dvdk ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+GROUP BY hdct.ma_dich_vu_di_kem  
+having so_lan_su_dung = 1;
     
     -- 15.	Hiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien, ho_ten, ten_trinh_do, ten_bo_phan, so_dien_thoai, dia_chi 
 -- mới chỉ lập được tối đa 3 hợp đồng từ năm 2020 đến 2021. 
@@ -293,13 +309,14 @@ FROM
     hop_dong hd ON hd.ma_nhan_vien = nv.ma_nhan_vien
 
 where (year(hd.ngay_lam_hop_dong) = 2020 or year(hd.ngay_lam_hop_dong) = 2021) 
-group by hd.ma_nhan_vien having count(hd.ma_nhan_vien) <=3;
+group by hd.ma_nhan_vien
+having count(hd.ma_nhan_vien) <=3;
     
     -- 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
 SET sql_safe_updates = 0;
 DELETE FROM nhan_vien 
 WHERE
-    ma_nhan_vien NOT IN (SELECT 
+    ma_nhan_vien NOT IN (SELECT 	-- đã từng
         ma_nhan_vien
     FROM
         hop_dong
@@ -316,7 +333,7 @@ UPDATE khach_hang
 SET 
     ma_loai_khach = 1
 WHERE
-    ma_khach_hang IN (SELECT 
+    ma_khach_hang IN (SELECT 	-- chưa từng
             temp.ma_khach_hang
         FROM
             (SELECT 

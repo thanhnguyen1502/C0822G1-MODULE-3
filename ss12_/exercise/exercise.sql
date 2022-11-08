@@ -1,21 +1,18 @@
-drop database if exists exercise;
+DROP DATABASE IF EXISTS user_manager;
 
-create database exercise;
-use exercise;
+CREATE DATABASE user_manager;
 
-create table users(
-id int(3) not null auto_increment,
-name varchar (120) not null,
-email varchar (220) not null,
-country varchar(120),
-primary key (id)
+USE user_manager;
+
+CREATE TABLE `user` (
+    id INT AUTO_INCREMENT,
+    `name` VARCHAR(120) NOT NULL,
+    email VARCHAR(220) NOT NULL,
+    country VARCHAR(120),
+    PRIMARY KEY (id)
 );
 
-insert into users (name, email, country) values ('Minh', 'minh@codegym.com','Viet Nam');
-insert into users (name, email, country) values ('Kante', 'kante@che.uk','Kenia');
-insert into users(name, email, country) values('Long','long@codegym.vn','Viet Nam');
-insert into users(name, email, country) values('Trung','trung@che.uk','UK');
-insert into users(name, email, country) values('Duyen','duyen@codegym.vn','Viet Nam');
-insert into users(name, email, country) values('Trang','trang@che.uk','US');
 
-drop procedure if exists display_user_list;
+INSERT INTO user_manager.`user` (`name`, email, country) 
+VALUE ('Minh','minh@codegym.vn','Viet Nam'),
+	  ('Kante', 'kante@che.uk','Kenia');

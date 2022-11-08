@@ -6,180 +6,156 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/common/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <%@ include file="/include/backgroud.jsp" %>
 </head>
 <body>
-<%@include file="/view/include/header.jsp"%>
+<%@ include file="/include/header.jsp" %>
 
-<div class="container w-50 mt-2 p-2" style="border: 1px solid grey; border-radius: 15px">
-    <h3 align="center">SỬA THÔNG TIN DỊCH VỤ</h3>
-    <form class="row g-3" action="/facility?action=EditService&id=${pId}" method="post">
-        <div class="col-md-12">
-            <label class="form-label">Loại dịch vụ</label>
-            <select name="serviceType"  class="form-select" onchange="showServiceInput(this)" id="serviceSelect">
-                <option value="None" disabled >Chọn loại dịch vụ</option>
-                <c:forEach items="${serviceTypes}" var="serviceTypes">
-                    <c:choose >
-                        <c:when test="${serviceTypes.serviceTypeCode==facility.serviceTypeCode}">
-                            <option value="${serviceTypes.serviceTypeCode}" selected>${serviceTypes.serviceTypeName}</option>
-                        </c:when>
-                        <c:otherwise>
-                            <option value="${serviceTypes.serviceTypeCode}">${serviceTypes.serviceTypeName}</option>
-                        </c:otherwise>
-                    </c:choose>
+<div class="row mt-5">
 
-                </c:forEach>
-            </select>
-        </div>
+    <div class="col-lg-3"></div>
 
-        <div class="col-md-12">
-            <label for="name" class="form-label">Tên dịch vụ</label>
-            <input type="text" class="form-control" id="name" name="name" value="${facility.serviceName}" required>
-            <c:if test="${name!=null}">
-                <p>${name}</p>
-            </c:if>
-        </div>
-        <div class="col-md-12">
-            <label for="area" class="form-label">Diện tích sử dụng</label>
-            <input type="number" class="form-control" id="area" name="area" value="${facility.squareUse}" required>
-            <c:if test="${useSquare!=null}">
-                <p>${useSquare}</p>
-            </c:if>
-        </div>
-        <div class="col-md-12">
-            <label for="cost" class="form-label">Chi phí thuê</label>
-            <input type="number" class="form-control" id="cost"  name="cost" value="${facility.cost}" required>
-            <c:if test="${cost!=null}">
-                <p>${cost}</p>
-            </c:if>
-        </div>
-        <div class="col-md-12">
-            <label for="max_people" class="form-label">Số lượng người tối đa </label>
-            <input type="number" class="form-control" id="max_people"  name="max_people" value="${facility.numberOfPeople}" required>
-            <c:if test="${numberOfPeople!=null}">
-                <p>${numberOfPeople}</p>
-            </c:if>
-        </div>
-        <div class="col-md-12">
-            <label  class="form-label">Kiểu thuê</label>
-            <select name="rentalType"  class="form-select">
-                <option value="None" disabled selected>Chọn kiểu thuê</option>
-                <c:forEach items="${rentalTypeList}" var="rentalTypeList">
+    <div style="background: #e9f2ef" class="col-lg-6 shadow-lg">
+        <h1 class="text-center">Create Facility Form</h1>
+        <form class="mt-5">
+            <div class="mb-3" id="facilityType">
+                <div class="form-check-inline">
+                    <b>Choice Facility Type:</b>
+                </div>
 
-                    <c:choose >
-                        <c:when test="${rentalTypeList.rentalTypeCode==facility.rentalTypeCode}">
-                            <option value="${rentalTypeList.rentalTypeCode}"selected >${rentalTypeList.rentalTypeName}</option>
-                        </c:when>
-                        <c:otherwise>
-                            <option value="${rentalTypeList.rentalTypeCode}" >${rentalTypeList.rentalTypeName}</option>
-                        </c:otherwise>
-                    </c:choose>
+                <input type="text" hidden id="facilityTypeValue" value="${facility.facilityType}">
 
-                </c:forEach>
-            </select>
-        </div>
-        <div class="col-md-12 " id="s1" style="display: none">
-            <label for="standard_room" class="form-label">Tiêu chuẩn phòng </label>
-            <input type="text" class="form-control" id="standard_room" name="standard_room" value="${facility.roomStandard}" required>
-        </div>
+                <div class="form-check form-check-inline " onclick="displayForm(villa.value)">
+                    <input class="form-check-input" type="radio" name="facility" id="villa" value="1">
+                    <label class="form-check-label" for="villa">Villa</label>
+                </div>
+                <div class="form-check form-check-inline" onclick="displayForm(house.value)">
+                    <input class="form-check-input" type="radio" name="facility" id="house" value="2">
+                    <label class="form-check-label" for="house">House</label>
+                </div>
+                <div class="form-check form-check-inline" onclick="displayForm(room.value)">
+                    <input class="form-check-input" type="radio" name="facility" id="room" value="3">
+                    <label class="form-check-label" for="room">Room</label>
+                </div>
+            </div>
 
-        <div class="col-md-12 " id="s2" style="display: none">
-            <label for="description_other_convenience" class="form-label">Mô tả tiện nghi khác</label>
-            <input type="text" class="form-control" id="description_other_convenience" name="description_other_convenience" value="${facility.descriptionOtherConvenience}" >
-        </div>
+            <div class="mb-3">
+                <label for="name" class="form-label"><b>Name:</b></label>
+                <input type="text" value="${facility.name}" class="form-control" id="name">
+            </div>
 
-        <div class="col-md-12 " id="s3" style="display: none">
-            <label for="pool_area" class="form-label">Diện tích hồ bơi  </label>
-            <input type="number" class="form-control" id="pool_area" name="pool_area" value="${facility.poolArea}" >
-            <c:if test="${poolArea!=null}">
-                <p>${poolArea}</p>
-            </c:if>
-        </div>
+            <div class="mb-3">
+                <label for="area" class="form-label"><b>Area:</b></label>
+                <input type="number" value="${facility.area}" class="form-control" id="area">
+            </div>
 
-        <div class="col-md-12" id="s4" style="display: none">
-            <label for="number_of_floors" class="form-label">Số tầng </label>
-            <input type="number" class="form-control" id="number_of_floors" name="number_of_floors" value="${facility.numberOfFloors}">
-            <c:if test="${numberOfFloors!=null}">
-                <p>${numberOfFloors}</p>
-            </c:if>
-        </div>
+            <div class="mb-3">
+                <label for="cost" class="form-label"><b>Cost:</b></label>
+                <input type="number" value="${facility.cost}" class="form-control" id="cost">
+            </div>
 
-        <div class="col-md-12 " id="s5" style="display: none">
-            <label for="facility_free" class="form-label">Dịch vụ miễn phí đi kèm </label>
-            <input type="text" class="form-control" id="facility_free" name="facility_free" value="${facility.freeServiceAdd}" >
-        </div>
+            <div class="mb-3">
+                <label for="maxPeople" class="form-label"><b>Max People:</b></label>
+                <input type="number" value="${facility.maxPeople}" class="form-control" id="maxPeople">
+            </div>
 
-        <div class="col-12 ">
-            <button type="submit" class="btn btn-primary">Gửi</button>
-        </div>
-    </form>
+            <div class="mb-3">
+                <label for="rentType" class="form-label"><b>Rent Type:</b></label>
+                <select id="rentType" class="form-select" aria-label="Default select example">
+                    <c:forEach var="facilityType" items="${facilityTypeList}">
+                        <c:if test="${facilityType.name == facility.facilityType}">
+                            <option value="${facilityType.id}">${facilityType.name}</option>
+                        </c:if>
+                    </c:forEach>
+
+                    <option value="1">year</option>
+                    <option value="2">month</option>
+                    <option value="3">day</option>
+                    <option value="4">hour</option>
+                </select>
+            </div>
+
+            <div class="mb-3" id="opt1" style="display: none">
+                <label for="roomStandard" class="form-label"><b>Room Standard:</b></label>
+                <select id="roomStandard" class="form-select" aria-label="Default select example">
+                    <option selected>select room standard</option>
+                    <option value="1">Vip</option>
+                    <option value="2">Normal</option>
+                </select>
+            </div>
+            <div class="mb-3" id="opt2" style="display: none">
+                <label for="poolArea" class="form-label"><b>Pool Area:</b></label>
+                <input type="number" value="0" class="form-control" id="poolArea">
+            </div>
+            <div class="mb-3" id="opt3" style="display: none">
+                <label for="numberOfFloors" class="form-label"><b>Number Of Floors:</b></label>
+                <input type="number" value="0" class="form-control" id="numberOfFloors">
+            </div>
+            <div class="mb-3" id="opt4" style="display: none">
+                <label for="descriptionOtherConvenience" class="form-label"><b>Description Other Convenience:</b></label>
+                <input type="number" class="form-control" id="descriptionOtherConvenience">
+            </div>
+            <div class="mb-3" id="opt5" style="display: none">
+                <label for="freeServiceIncluded" class="form-label"><b>Free Service Included:</b></label>
+                <input type="number" class="form-control" id="freeServiceIncluded">
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-3">Submit</button>
+        </form>
+    </div>
+    <div class="col-lg-3"></div>
 </div>
 
-
-
+<%@ include file="/include/footer.jsp" %>
 <script>
-    function showServiceInput(value) {
-        var v = value.value;
-        switch (v) {
-            case 'None':
-                document.getElementById("s1").style.display="none";
-                document.getElementById("s2").style.display="none";
-                document.getElementById("s3").style.display="none";
-                document.getElementById("s4").style.display="none";
-                document.getElementById("s5").style.display="none";
+    window.onload = getFacilityType();
+    function getFacilityType(){
+        let a = document.getElementById("facilityTypeValue").value
+        console.log(a)
+        switch (a){
+            case "villa":
+                document.getElementById("villa").checked
                 break;
-            case "1":
-                document.getElementById("s1").style.display="block";
-                document.getElementById("s2").style.display="block";
-                document.getElementById("s3").style.display="block";
-                document.getElementById("s4").style.display="block";
-                document.getElementById("s5").style.display="none";
+            case "house":
+                document.getElementById("house").checked
                 break;
-            case "2":
-                document.getElementById("s1").style.display="block";
-                document.getElementById("s2").style.display="block";
-                document.getElementById("s4").style.display="block";
-                document.getElementById("s5").style.display="none";
-                document.getElementById("s3").style.display="none";
-                break;
-            case "3":
-                document.getElementById("s1").style.display="none";
-                document.getElementById("s2").style.display="none";
-                document.getElementById("s3").style.display="none";
-                document.getElementById("s4").style.display="none";
-                document.getElementById("s5").style.display="block";
+            case "room":
+                document.getElementById("room").checked
                 break;
         }
     }
-    window.onload=function (){
-        if( document.getElementById("serviceSelect").value =='1'){
-            document.getElementById("s1").style.display="block";
-            document.getElementById("s2").style.display="block";
-            document.getElementById("s3").style.display="block";
-            document.getElementById("s4").style.display="block";
-            document.getElementById("s5").style.display="none";
-        }
-        if( document.getElementById("serviceSelect").value =='2') {
-            document.getElementById("s1").style.display="block";
-            document.getElementById("s2").style.display="block";
-            document.getElementById("s4").style.display="block";
-            document.getElementById("s5").style.display="none";
-            document.getElementById("s3").style.display="none";
-        }
-        if( document.getElementById("serviceSelect").value =='3') {
-            document.getElementById("s1").style.display="none";
-            document.getElementById("s2").style.display="none";
-            document.getElementById("s3").style.display="none";
-            document.getElementById("s4").style.display="none";
-            document.getElementById("s5").style.display="block";
+    function displayForm(value) {
+        switch (value) {
+            case "1":
+                document.getElementById("opt1").style.display = "block";
+                document.getElementById("opt2").style.display = "block";
+                document.getElementById("opt3").style.display = "block";
+                document.getElementById("opt4").style.display = "block";
+                document.getElementById("opt5").style.display = "none";
+                break;
+            case "2":
+                document.getElementById("opt1").style.display = "block";
+                document.getElementById("opt2").style.display = "none";
+                document.getElementById("opt3").style.display = "block";
+                document.getElementById("opt4").style.display = "block";
+                document.getElementById("opt5").style.display = "none";
+                break;
+            case "3":
+                document.getElementById("opt1").style.display = "none";
+                document.getElementById("opt2").style.display = "none";
+                document.getElementById("opt3").style.display = "none";
+                document.getElementById("opt4").style.display = "none";
+                document.getElementById("opt5").style.display = "block";
+                break;
         }
     }
 </script>
-<%@include file="/view/include/footer.jsp"%>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
-<script src="/bootstrap/js/jquery-3.6.0.min.js"></script>
+<script src="/common/popper.min.js"></script>
+<script src="/common/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 </body>
 </html>

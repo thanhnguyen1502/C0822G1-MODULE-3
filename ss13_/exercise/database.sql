@@ -15,7 +15,9 @@ CREATE TABLE `user` (
 
 INSERT INTO user_manager.`user` (`name`, email, country) 
 VALUE ('Minh','minh@codegym.vn','Viet Nam'),
-	  ('Kante', 'kante@che.uk','Kenia');
+	  ('Kante', 'kante@che.uk','Kenia'),
+      ('Hung', 'hung@che.uk','Kenia'),
+      ('Nam', 'nam@che.uk','Kenia');
       
 DELIMITER $$
 CREATE PROCEDURE get_user_by_id (IN user_id INT)
