@@ -10,6 +10,9 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
     <style>
         p {
             color: red;
@@ -17,7 +20,7 @@
     </style>
 </head>
 <body>
-<%@include file="/view/include/header.jsp"%>
+<%@include file="/include/header.jsp"%>
 
 <div class="container w-50 mt-2 p-2" style="border: 1px solid grey; border-radius: 15px">
     <h3 align="center">THÊM MỚI DỊCH VỤ</h3>
@@ -183,7 +186,7 @@
         }
     }
 </script>
-<%@include file="/view/include/footer.jsp"%>
+<%@include file="/include/footer.jsp"%>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
 <script src="/bootstrap/js/jquery-3.6.0.min.js"></script>
 </body>

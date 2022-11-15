@@ -9,6 +9,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @WebServlet(name = "CustomerFuramaServlet", value = "/CustomerFurama")
@@ -78,7 +79,6 @@ public class CustomerFuramaServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private void updateCustomer(HttpServletRequest request, HttpServletResponse response) {
@@ -92,7 +92,7 @@ public class CustomerFuramaServlet extends HttpServlet {
         String customerType = request.getParameter("customerType");
         String address = request.getParameter("customerAddress");
 
-        Customer customer = new Customer(name, birthDay, genderCustomer, idCard, phoneNumber, email, customerType, address);
+        Customer customer = new Customer(name, birthDay, genderCustomer, idCard, phoneNumber, email, id, customerType, address);
 
         this.customerService.editCustomer(customer);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/customer/edit.jsp");
@@ -125,15 +125,9 @@ public class CustomerFuramaServlet extends HttpServlet {
     private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("deleteCustomerId"));
         this.customerService.deleteCustomer(id);
-        List<Customer> customerList = customerService.selectAllCustomer();
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/customer/list.jsp");
-        request.setAttribute("message", "successful delete");
-        request.setAttribute("customerList", customerList);
         try {
-            requestDispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
+            response.sendRedirect("/CustomerFurama");
         } catch (IOException e) {
             e.printStackTrace();
         }

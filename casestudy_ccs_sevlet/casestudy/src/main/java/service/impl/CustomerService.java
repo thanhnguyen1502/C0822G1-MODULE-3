@@ -22,8 +22,8 @@ public class CustomerService implements ICustomerService {
     }
 
     @Override
-    public void deleteCustomer(int id) {
-    this.customerRepository.deleteCustomer(id);
+    public boolean deleteCustomer(int idDelete) {
+       return customerRepository.deleteCustomer(idDelete);
     }
 
     @Override

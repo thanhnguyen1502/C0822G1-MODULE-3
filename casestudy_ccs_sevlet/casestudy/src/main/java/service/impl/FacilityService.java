@@ -6,15 +6,12 @@ import model.facility.FacilityType;
 import repository.impl.BaseRepository;
 import service.IFacitityService;
 
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FacilityService implements IFacitityService {
-    private final String SELECT_ALL_FACILITY = "CALL service_list();";
+    private final String SELECT_ALL_FACILITY = "select*from facility;";
     private final String ADD_NEW_FACILITY = "CALL add_new_service(?,?,?,?,?,?,?,?,?,?,?);";
     private final String DELETE_FACILITY = "CALL delete_facility(?);";
     private final String FIND_FACILITY_BY_ID = "CALL find_facility_by_id(?);";
@@ -31,17 +28,17 @@ public class FacilityService implements IFacitityService {
         Connection connection = BaseRepository.getConnectDB();
 
         try {
-            CallableStatement callableStatement = connection.prepareCall(SELECT_ALL_FACILITY);
-            callableStatement.executeQuery();
-            ResultSet resultSet = callableStatement.getResultSet();
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_FACILITY);
+            preparedStatement.executeQuery();
+            ResultSet resultSet = preparedStatement.getResultSet();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
-                String serviceName = resultSet.getString("service_name");
-                int usableArea = resultSet.getInt("usable_area");
+                String serviceName = resultSet.getString("name");
+                int usableArea = resultSet.getInt("area");
                 double cost = resultSet.getDouble("cost");
                 int maxPeople = resultSet.getInt("max_people");
-                String rentTypeId = resultSet.getString("rent_type");
-                String serviceTypeId = resultSet.getString("service_type");
+                String rentTypeId = resultSet.getString("rent_type_id");
+                String serviceTypeId = resultSet.getString("facility_type_id");
                 String roomStandard = resultSet.getString("standard_room");
                 double poolArea = resultSet.getDouble("pool_area");
                 String descriptionOtherConvenience = resultSet.getString("description_other_convenience");

@@ -18,7 +18,9 @@
         <a class="navbar-brand" href="http://localhost:8080/">
             <img src="https://furamavietnam.com/wp-content/uploads/2018/10/logo.png" alt="" width="90" height="100">
         </a>
-        <b class="text-end">Nguyễn Văn Thành</b>
+        <b class="text-end">
+            Nguyễn Văn Thành
+        </b>
     </div>
 </nav>
 
@@ -55,4 +57,5 @@
 <script src="common/popper.min.js"></script>
 <script src="common/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 </body>
+
 </html>

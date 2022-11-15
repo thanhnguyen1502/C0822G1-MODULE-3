@@ -155,7 +155,7 @@ public class ServiceFuramaServlet extends HttpServlet {
     }
 
     private void showServiceListPage(HttpServletRequest request, HttpServletResponse response) {
-        List<Facility> facilityList = this.facilityService.selectAllService();
+        List<Facility> facilityList =  facilityService.selectAllService();
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/facility/list.jsp");
         request.setAttribute("facilityList",facilityList);

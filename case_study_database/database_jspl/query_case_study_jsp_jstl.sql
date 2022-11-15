@@ -66,6 +66,7 @@ BEGIN
 END //
 DELIMITER ;
 
+--  call delete_customer(1);
 
 DELIMITER //
 CREATE PROCEDURE find_customer_by_id(IN customer_id_find INT)
@@ -117,6 +118,9 @@ BEGIN
 		c.id = id_edit;
 END //
 DELIMITER ;
+select * from customer;
+update customer set customer_type_id = '111' ,`name` = 'a1aaa' , date_of_birth ='2021-02-25',gender ='1',id_card ='?',phone_number='?',email='?', address='?' where id =5;
+-- update customer set id =? ,`name` = ? , date_of_birth =?,gender =?,id_card =?,phone_number=?,email=?, address=? where id =?;
 
 DELIMITER //
 CREATE PROCEDURE customer_type_list()
@@ -182,3 +186,4 @@ END //
 DELIMITER ;
 
 CALL service_list();
+select * from customer

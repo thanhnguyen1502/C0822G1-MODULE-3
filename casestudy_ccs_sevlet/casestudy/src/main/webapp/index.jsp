@@ -58,8 +58,8 @@
                       <p class="mt-3">Support</p>
                     </button>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">0934774152</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">0372864453</a></li>
+                      <li><a class="dropdown-item" href="#">Mr. Thanh</a></li>
                       <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                   </div>

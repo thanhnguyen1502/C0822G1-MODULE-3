@@ -85,8 +85,15 @@ CREATE TABLE furama_management.customer (
     phone_number VARCHAR(45),
     email VARCHAR(45),
     address VARCHAR(45),
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    `status` bit(1) default 1
 );
+
+-- update customer set `status` =  0 where id = 1;
+update customer set name = 'thanh', date_of_birth = '1997-02-15', gender = 1, id_card = '1' ,phone_number ='45454',email='aa@gmail.com',address='quangnam' where id = 3;
+select * from customer;
+
+
 
 -- Dịch vụ --
 CREATE TABLE furama_management.facility (
