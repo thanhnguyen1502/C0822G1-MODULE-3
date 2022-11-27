@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đọc Truyện</title>
+    <style>
+        body {
+            background: linear-gradient(to right,#000000, #333131);
+
+        }
+
+        #main {
+            position: relative;
+            margin-left: 15%;
+            width: 70%;
+        }
+
+        img {
+            height: 370px;
+            width: 250px;
+            box-shadow: black 10px 8px;
+        }
+
+        .category {
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            margin: 25px 25px;
+            height: 700px;
+        }
+
+        .list {
+            display: none;
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .category:hover .list {
+            display: block;
+        }
+
+        #contents {
+            margin-left: 15%;
+            width: 70%;
+        }
+
+        button {
+            background: linear-gradient(to right,#B3BF00, #799F0C);
+            width: 100%;
+            height: 40px;
+            margin-top: 20px;
+            border: none;
+            box-shadow: black 10px 8px;
+            border-radius: 5px;
+            font-family: Allison, serif;
+            font-weight: bold;
+            font-size: 30px;
+            color: #ad2427;
+            opacity: 70%;
+        }
+
+        button:hover {
+            background: #ad2427;
+            color: lightblue;
+            opacity: 100%;
+        }
+
+        .bt_category {
+            font-size: 32px;
+
+        }
+
+        #contents p {
+            background: -webkit-linear-gradient(45deg, #FFE000, #799F0C 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: justify;
+            text-indent: 25px;
+            font-size: 20px;
+        }
+
+        #contents h4 {
+            color: #a9de09;
+            font-size: 30px;
+            text-decoration-line: underline;
+        }
+
+        #contents h5 {
+            color: #93ba1c;
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #to_top{
+            width: 50px;
+            height: 50px;
+            float: right;
+            position: fixed;
+            top: 80%;
+            right: 5%;
+        }
+
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Allison' rel='stylesheet'>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+</head>
+<body>
+<div id="main">
+    <div class="category">
+        <a href="#kim_dung"><img src="https://image.ibb.co/bwGuSw/gamehub_ahxd_1.jpg" alt="Tiểu thuyết Kim Dung"></a>
+        <br>
+        <button class="bt_category">Tiểu thuyết Kim Dung</button>
+        <div class="list">
+            <a href="#kim_dung1">
+                <button>Xạ điêu anh hùng truyện</button>
+            </a>
+            <a href="#kim_dung2">
+                <button>Tiếu ngạo giang hồ</button>
+            </a>
+            <a href="#kim_dung3">
+                <button>Ỷ thiên đồ long ký</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="category">
+        <a href="#foreign"><img
+                src="https://cdn.shopify.com/s/files/1/0575/8287/8927/products/harry-potter-va-ten-tu-nha-nguc-azkaba-tap-3-tai-ban_1400x.jpg?v=1634356373"
+                alt="Văn học nước ngoài"></a>
+        <br>
+        <button class="bt_category">Văn học nước ngoài</button>
+        <div class="list">
+            <a href="#foreign1">
+                <button>Harry Potter</button>
+            </a>
+            <a href="#foreign2">
+                <button>Hai số phận</button>
+            </a>
+            <a href="#foreign3">
+                <button>Bố già</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="category">
+        <a href="#viet_nam"><img src="https://image.lag.vn/upload/news/20/03/25/D_SODO-poster-final2303_EHAH.jpg"
+                                 alt="Văn học Việt Nam"></a>
+        <br>
+        <button class="bt_category">Văn học Việt Nam</button>
+        <div class="list">
+            <a href="#viet_nam1">
+                <button>Số đỏ</button>
+            </a>
+            <a href="#viet_nam2">
+                <button>Mắt biếc</button>
+            </a>
+            <a href="#viet_nam3">
+                <button>Tắt đèn</button>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="contents">
+    <div>
+        <h4 id="kim_dung">Tiểu thuyết Kim Dung</h4>
+        <h5 id="kim_dung1">Xạ điêu anh hùng truyện</h5>
+        <p>Anh hùng xạ điêu (giản thể: 射雕英雄传; phồn thể: 射鵰英雄傳; bính âm: shè diāo yīng xióng zhuàn; Hán Việt: Xạ điêu anh
+            hùng truyện) là một trong những tiểu thuyết võ hiệp của Kim Dung được đánh giá cao, được Hương Cảng Thương
+            Báo xuất bản năm 1957. Đây là tiểu thuyết đầu tiên của Xạ Điêu Tam Bộ Khúc. Kim Dung đã chỉnh sửa tất cả các
+            tác phẩm của mình bao gồm tiểu thuyết này vào những năm 1970 và một lần nữa vào những năm 2000.</p>
+        <p>Truyện xảy ra vào thời nhà Tống (960-1279) khi người người Nữ Chân bắt đầu tấn công bắc Trung Quốc. Phần đầu
+            của tiểu thuyết xoay quanh tình bạn giữa Dương Thiết Tâm và Quách Khiếu Thiên, hai vị hiệp sĩ đã anh dũng
+            chiến đấu chống lại sự tàn bạo của quân Kim. Mối quan hệ của hai gia đình khăng khít đến nỗi họ thề ước là
+            khi con họ lớn lên, chúng sẽ kết nghĩa huynh đệ, kết thành tỷ muội hoặc kết thành phu thê.</p>
+        <p>Phần hai của câu chuyện tập trung vào những gian nan đau khổ mà cả hai phải trải qua. Quách Tĩnh, con của
+            Quách Khiếu Thiên lớn lên ở Mông Cổ, dưới sự bảo vệ của Thành Cát Tư Hãn. Dương Khang mặt khác lớn lên là
+            hoàng thân của nhà Kim.</p><br>
+        <hr>
+        <h5 id="kim_dung2">Tiếu ngạo giang hồ</h5>
+        <p>Tiếu ngạo giang hồ (tiếng Trung: 笑傲江湖; bính âm: xiào ào jiāng hú, tiếng Anh: The Smiling, Proud Wanderer,
+            hoặc State of Divinity) là một tiểu thuyết kiếm hiệp của Kim Dung, lần đầu tiên được phát hành trên Minh báo
+            từ ngày 20 tháng 4 năm 1967 đến 12 tháng 10 năm 1969.[1][2] Tiêu đề "Tiếu ngạo giang hồ" được đặt theo một
+            bản nhạc cầm tiêu hợp tấu đóng vai trò trung tâm của tác phẩm. Tiếu ngạo giang hồ được coi là một trong
+            những tiểu thuyết đặc sắc nhất của tác giả.</p>
+        <p>Nội dung bộ truyện xoay quanh những đề tài về tình bạn, tình yêu, sự dối trá, phản bội, những âm mưu và cả
+            ham muốn quyền lực. Trung tâm của toàn bộ cốt truyện là nhân vật chính Lệnh Hồ Xung, đại đệ tử của chưởng
+            môn phái Hoa Sơn Nhạc Bất Quần. Xuyên suốt câu chuyện, người đọc được dẫn dắt theo hành trình trở thành một
+            kiếm khách lẫy lừng của chàng lãng tử này, đồng thời trải nghiệm những chứng kiến của Lệnh Hồ Xung đối với
+            nhiều âm mưu tranh quyền đoạt vị trên giang hồ.</p>
+        <p>Các diễn biến được phát triển dựa trên một bí kíp kiếm pháp truyền thuyết và sự liên hệ giữa các nhân vật với
+            bí kíp đó. Theo lời đồn đại trên giang hồ, trong gia đình nhà họ Lâm có một pho kiếm phổ chép tay tên gọi
+            "Tịch tà kiếm pháp", người luyện được kiếm pháp này có thể sở hữu tốc độ như sấm chớp, võ công làm mưa làm
+            gió chốn võ lâm. Nhiều người thực sự thèm khát có được nó, trong đó có những nhân vật tiếng tăm trên giang
+            hồ như Tả Lãnh Thiền trưởng môn phái Tung Sơn, minh chủ khối Ngũ Nhạc, Nhạc Bất Quần trưởng môn phái Hoa
+            Sơn, Dư Thương Hải trưởng môn phái Thanh Thành hay Mộc Cao Phong, Lao Đức Nặc,... Chính từ đây đã nảy sinh
+            bao âm mưu, bất hòa, tranh chấp hòng giành giật pho bí kíp này, xưng bá võ lâm.</p><br>
+        <hr>
+        <h5 id="kim_dung3">Ỷ thiên đồ long ký</h5>
+        <p>Các diễn biến được phát triển dựa trên một bí kíp kiếm pháp truyền thuyết và sự liên hệ giữa các nhân vật với
+            bí kíp đó. Theo lời đồn đại trên giang hồ, trong gia đình nhà họ Lâm có một pho kiếm phổ chép tay tên gọi
+            "Tịch tà kiếm pháp", người luyện được kiếm pháp này có thể sở hữu tốc độ như sấm chớp, võ công làm mưa làm
+            gió chốn võ lâm. Nhiều người thực sự thèm khát có được nó, trong đó có những nhân vật tiếng tăm trên giang
+            hồ như Tả Lãnh Thiền trưởng môn phái Tung Sơn, minh chủ khối Ngũ Nhạc, Nhạc Bất Quần trưởng môn phái Hoa
+            Sơn, Dư Thương Hải trưởng môn phái Thanh Thành hay Mộc Cao Phong, Lao Đức Nặc,... Chính từ đây đã nảy sinh
+            bao âm mưu, bất hòa, tranh chấp hòng giành giật pho bí kíp này, xưng bá võ lâm.</p>
+        <p>Bối cảnh tiểu thuyết lấy vào cuối thời nhà Nguyên, 80 năm sau sự kiện trên đỉnh Hoa Sơn trong Thần điêu hiệp
+            lữ, lúc này nhà Nguyên đang bị suy yếu bởi các cuộc khởi nghĩa và vì sự xa hoa lãng phí của triều đình.
+            Truyện xoay quanh Trương Vô Kỵ và mối tình phức tạp với 4 cô gái, bên cạnh đó là những âm mưu thủ đoạn đầy
+            máu tanh trên giang hồ nhằm chiếm đoạt hai món báu vật là Đồ Long đao và Ỷ Thiên kiếm, với lời đồn nếu tìm
+            được bí mật trong đao kiếm sẽ hiệu triệu được thiên hạ. Truyện kết thúc với sự sụp đổ của nhà Nguyên, người
+            Mông Cổ phải rút về thảo nguyên phía bắc cùng với sự thành lập của nhà Minh bởi Minh Thái Tổ Chu Nguyên
+            Chương.</p>
+        <p>Trương Vô Kỵ là nhân vật chính trong truyện, được xem là có nội tâm phức tạp hơn so với Quách Tĩnh và Dương
+            Quá, điều này làm cho nhân vật trở nên thực tế hơn. Trương Vô Kỵ vào cuối truyện xem Triệu Mẫn là tình yêu
+            lớn nhất của đời mình, nhưng anh vẫn nhớ nhung 3 cô gái khác. Mặc dù có võ công cao cường và là một người
+            chính trực khẳng khái, có thể truyền cảm hứng cho người khác, song Trương Vô Kỵ không hề có những tố chất
+            cần thiết của một nhà lãnh đạo là lòng ham muốn mãnh liệt với quyền lực và tâm kế để duy trì quyền lực.
+            Chính vì vậy vào cuối truyện, anh đã bị Chu Nguyên Chương lừa nên từ chức và bỏ đi cùng Triệu Mẫn, khiến
+            quyền lực của quân khởi nghĩa chống Nguyên dần rơi vào tay Chu Nguyên Chương, làm bước đệm cho Chu Nguyên
+            Chương giành lấy thiên hạ.</p><br>
+        <hr>
+    </div>
+    <br>
+    <div>
+        <h4 id="foreign">Văn học nước ngoài</h4>
+        <h5 id="foreign1">Harry Potter</h5>
+        <p>Harry Potter là tên của series tiểu thuyết phim huyền bí gồm bảy phần của nhà văn Anh Quốc J. K. Rowling. Bộ
+            truyện viết về những cuộc phiêu lưu phù thủy của cậu bé Harry Potter cùng hai người bạn thân là Ronald
+            Weasley và Hermione Granger, lấy bối cảnh tại Trường Phù thủy và Pháp sư Hogwarts nước Anh. Những cuộc phiêu
+            lưu tập trung vào cuộc chiến của Harry Potter trong việc chống lại tên Chúa tể hắc ám Voldemort – người có
+            tham vọng muốn trở nên bất tử, thống trị thế giới phù thủy, nô dịch hóa những người phi pháp thuật và tiêu
+            diệt những ai cản đường hắn, đặc biệt là Harry Potter.</p>
+        <p>Bộ truyện kết hợp nhiều thể loại, bao gồm cả giả tưởng và giai đoạn tuổi mới lớn (với các yếu tố huyền bí,
+            kinh dị, phiêu lưu và lãng mạn), nhiều ý nghĩa về văn hóa và tư liệu tham khảo. Cũng theo tác giả J. K.
+            Rowling, chủ đề chính xuyên suốt là Cái chết.</p>
+        <p>Ngay từ khi xuất bản phần một (Harry Potter and the Philosopher's Stone – ấn bản Anh; Harry Potter and the
+            Sorcerer's Stone - ấn bản Mỹ; Harry Potter và Hòn đá Phù thủy – bản dịch tiếng Việt) vào ngày 30 tháng 6 năm
+            1997, bộ truyện ngày càng nổi tiếng trên toàn thế giới, được giới phê bình hoan nghênh và rất thành công về
+            mặt thương mại. Bộ truyện cũng nhận được một số lời chỉ trích, bao gồm cả việc lo ngại về vẻ đen tối ngày
+            càng tăng. Đến tháng 2 năm 2018, cả bảy quyển đã bán được hơn 500 triệu bản, trở thành bộ sách bán chạy nhất
+            trong lịch sử và được dịch sang 67 ngôn ngữ. Phần bảy, và cũng là phần cuối cùng, Harry Potter and the
+            Deathly Hallows (Harry Potter và Bảo bối Tử thần) xuất bản vào ngày 21 tháng 7 năm 2007. Hơn 11 triệu quyển
+            đã được bán trong 24 giờ đầu tiên[4].</p><br>
+        <hr>
+        <h5 id="foreign2">Hai số phận</h5>
+        <p>Hai số phận (có tên gốc tiếng Anh là: Kane and Abel) là một cuốn tiểu thuyết được sáng tác vào năm 1979 bởi
+            nhà văn người Anh Jeffrey Archer. Tựa đề Kane and Abel dựa theo câu chuyện của anh em: Cain và Abel trong
+            Kinh Thánh Cựu Ước.</p>
+        <p>Tác phẩm được xuất bản tại Anh Quốc vào năm 1979 và tại Hoa Kỳ vào tháng 2 năm 1980, cuốn sách phổ biến thành
+            công trên thế giới. Sách đạt danh hiệu sách bán chạy nhất theo danh sách của tờ New York Times và năm 1985
+            nó được đưa lên chương trình truyền hình miniseries của CBS với tên là Kane & Abel bắt đầu với Peter Strauss
+            vai Rosnovski và Sam Neill vai Kane.</p>
+        <p>Cuốn sách là một câu chuyện kể về hai người có số phận khác nhau. Họ không có điểm gì giống nhau cả ngoại trừ
+            việc họ sinh ra vào cùng một thời điểm (18/04/1906) và có một lòng quyết tâm để đạt được thành công trong
+            cuộc sống. William Lowell Kane là một người mạnh mẽ và giàu có trong khi đó Abel Rosnovski (tên ban đầu là
+            Wladek Koskiewicz) là một người gốc Ba Lan phải đấu tranh từ lúc sinh ra và lớn lên cùng với những người
+            nghèo khổ, cuối cùng di cư đến Hoa Kỳ.</p>
+        <p>Trải qua hơn sáu mươi năm với biết bao biến động, hai con người giàu hoài bão miệt mài xây dựng vận mệnh của
+            mình . “Hai số phận” nói về nỗi khát khao cháy bỏng, những nghĩa cử, những mối thâm thù, từng bước đường
+            phiêu lưu, hiện thực thế giới và những góc khuất... mê hoặc người đọc bằng ngôn từ cô đọng, hai mạch truyện
+            song song được xây dựng tinh tế từ những chi tiết nhỏ nhất.)</p><br>
+        <hr>
+        <h5 id="foreign3">Bố già</h5>
+        <p>Bố già (tiếng Anh: The Godfather) là tên một cuốn tiểu thuyết nổi tiếng của nhà văn người Mỹ gốc Ý Mario Puzo
+            được xuất bản lần đầu vào năm 1969 bởi nhà xuất bản G. P. Putnam's Sons. Tác phẩm là câu chuyện về một gia
+            đình mafia gốc Sicilia tại Mỹ được tạo lập và lãnh đạo bởi một nhân vật được gọi là "Bố già" (Godfather) Don
+            Vito Corleone. Các sự kiện chính của tiểu thuyết xảy ra từ năm 1945 đến 1955 ngoài ra cũng đề cập đến thời
+            thơ ấu và giai đoạn thanh niên của Vito Corleone vào đầu thế kỉ 20.</p>
+        <p>Thế giới ngầm được phản ánh trong tiểu thuyết Bố già là sự gặp gỡ giữa một bên là ý chí cương cường và nền
+            tảng gia tộc chặt chẽ theo truyền thống Mafia xứ Sicily với một bên là xã hội Mỹ nhập nhằng đen trắng, mảnh
+            đất màu mỡ cho những cơ hội làm ăn bất chính hứa hẹn những món lợi kếch xù. Trong thế giới ấy, hình tượng Bố
+            già được tác giả dày công khắc họa đã trở thành bức chân dung bất hủ trong lòng người đọc.</p>
+        <p>Từ một kẻ nhập cư tay trắng đến ông trùm tột đỉnh quyền uy, Don Vito Corleone là con rắn hổ mang thâm trầm,
+            nguy hiểm khiến kẻ thù phải kiềng nể, e dè, nhưng cũng được bạn bè, thân quyến xem như một đấng toàn năng
+            đầy nghĩa khí. Nhân vật trung tâm ấy đồng thời cũng là hiện thân của một pho triết lí rất “đời” được nhào
+            nặn từ vốn sống của hàng chục năm lăn lộn giữa chốn giang hồ bao phen vào sinh ra tử.</p>
+        <p>Với kết cấu hoàn hảo, cốt truyện không thiếu những pha hành động gay cấn, tình tiết bất ngờ và không khí kình
+            địch đến nghẹt thở, Bố già xứng đáng là đỉnh cao trong sự nghiệp văn chương của Mario Puzo.</p><br>
+        <hr>
+    </div>
+    <br>
+    <div>
+        <h4 id="viet_nam">Văn học Việt Nam</h4>
+        <h5 id="viet_nam1">Số đỏ</h5>
+        <p>Số đỏ là một tiểu thuyết văn học của nhà văn Vũ Trọng Phụng, đăng ở Hà Nội báo từ số 40 ngày 7 tháng 10 năm
+            1936 và được in thành sách lần đầu vào năm 1938. Nhiều nhân vật và câu nói trong tác phẩm đã đi vào cuộc
+            sống đời thường và tác phẩm đã được dựng thành kịch, phim. Nhân vật chính của Số đỏ là Xuân - biệt danh là
+            Xuân Tóc đỏ, từ chỗ là một kẻ bị coi là hạ lưu, bỗng nhảy lên tầng lớp danh giá của xã hội nhờ trào lưu Âu
+            hóa của giới tiểu tư sản Hà Nội khi đó. Tác phẩm Số đỏ, cũng như các tác phẩm khác của Vũ Trọng Phụng đã
+            từng bị cấm lưu hành tại Việt Nam Dân chủ Cộng hòa trước năm 1975 cũng như tại Việt Nam thống nhất từ năm
+            1975 cho đến năm 1986</p>
+        <p>Cho đến nay, tác phẩm Số đỏ đã được tái xuất bản và được phê duyệt ở Việt Nam. Đồng thời đoạn trích của tác
+            phẩm này cũng được đưa vào chương trình học ở trong nước (Sách giáo khoa Ngữ văn 11, tập 1 với tên gọi: Hạnh
+            phúc của một tang gia).</p>
+        <p>Truyện dài 20 chương và được bắt đầu khi bà Phó Đoan đến chơi ở sân quần vợt nơi Xuân tóc đỏ làm việc. Vô
+            tình Xuân tóc đỏ vì xem trộm 1 cô đầm thay đồ nên bị cảnh sát bắt giam và được bà Phó Đoan bảo lãnh. Sau đó,
+            bà Phó Đoan giới thiệu Xuân đến làm việc ở tiệm may Âu Hóa, từ đó Xuân bắt đầu tham gia vào việc cải cách xã
+            hội. Nhờ thuộc lòng những bài quảng cáo thuốc lậu, hắn được vợ chồng Văn Minh gọi là "sinh viên trường
+            thuốc", "đốc tờ Xuân". Hắn gia nhập xã hội thượng lưu, quen với những người giàu và có thế lực, quyến rũ
+            được cô Tuyết và phát hiện cô Hoàng Hôn ngoại tình. Xuân còn được bà Phó Đoan nhờ dạy dỗ cậu Phước, được nhà
+            sư Tăng Phú mời làm cố vấn cho báo Gõ Mõ. Vì vô tình, hắn gây ra cái chết cho cụ cố tổ nên được mọi người
+            mang ơn. Văn Minh vì nghĩ ơn của Xuân nên dẫn Xuân đi xóa bỏ lý lịch trước kia rồi đăng ký đi tranh giải
+            quần vợt nhân dịp vua Xiêm đến Bắc Kì. Bằng thủ đoạn xảo trá, hắn làm 2 vận động viên quán quân bị bắt ngay
+            trước hôm thi đấu nên Xuân được dịp thi tài với quán quân Xiêm. Vì để giữ tình giao hảo, hắn được lệnh phải
+            thua. Kết thúc trận đấu, khi bị đám đông phản đối, Xuân hùng hồn diễn thuyết cho đám đông dân chúng hiểu
+            hành động "hy sinh vì tổ quốc của mình", được mời vào hội Khai trí tiến đức, được nhận huân chương Bắc Đẩu
+            bội tinh và cuối cùng trở thành con rể cụ cố Hồng.</p><br>
+        <hr>
+        <h5 id="viet_nam2">Mắt biếc</h5>
+        <p>Mắt biếc là tiểu thuyết của nhà văn Nguyễn Nhật Ánh trong loạt truyện viết về tình yêu thanh thiếu niên của
+            tác giả này cùng với Thằng quỷ nhỏ, Cô gái đến từ hôm qua,... Đây được xem là một trong những tác phẩm tiêu
+            biểu của Nguyễn Nhật Ánh, từng được dịch giả Kato Sakae dịch để giới thiệu với độc giả Nhật Bản với tựa đề
+            Tsuburana hitomi (つぶらな瞳).</p>
+        <p>Tác phẩm này được chuyển thể thành phim do Victor Vũ làm đạo diễn, khởi chiếu chính thức vào ngày 20 tháng 12
+            năm 2019.</p>
+        <p>Mắt biếc kể về cuộc đời của nhân vật chính tên Ngạn. Ngạn sinh ra và lớn lên ở một ngôi làng tên là làng Đo
+            Đo (thuộc xã Bình Quế - huyện Thăng Bình - tỉnh Quảng Nam - cũng là nguyên quán của tác giả). Lớn lên cùng
+            với Ngạn là cô bạn hàng xóm có đôi mắt tuyệt đẹp tên là Hà Lan. Tuổi thơ của Ngạn và Hà Lan gắn bó với bao
+            nhiêu kỉ niệm cùng đồi sim, đánh trống trường... Tình bạn trẻ thơ dần dần biến thành tình yêu thầm lặng của
+            Ngạn dành cho Hà Lan. Đến khi lớn hơn một chút, cả hai phải rời làng ra thành phố để tiếp tục học. Khi tấm
+            lòng của Ngạn luôn hướng về Hà Lan và về làng, thì Hà Lan không cưỡng lại được cám dỗ của cuộc sống xa hoa
+            nơi đô thị và ngã vào vòng tay của Dũng. Việc Hà Lan ngã vào vòng tay Dũng, một thanh niên nhà giàu, sành
+            điệu, giỏi võ nhưng rất thiếu đứng đắn đã làm cho Ngạn đau khổ rất nhiều vì điều Ngạn cần là hạnh phúc của
+            Hà Lan.</p>
+        <p>Mỗi khi Dũng làm Hà Lan tổn thương cô lại tìm Ngạn để tâm sự, điều đó lại càng làm cho Ngạn buồn thêm. Có lần
+            Ngạn đã đánh nhau với Dũng vì Hà Lan và kết quả tất nhiên là Ngạn thua nhưng điều đó đã không làm cho Ngạn
+            bớt đi tính anh hùng, sẵn sàng đánh nhau mỗi khi Hà Lan bị bắt nạt. Cũng từ đó những cảm xúc mỗi khi Hà Lan
+            tìm đến Ngạn để giãi bày niềm tâm sự giảm bớt đi.</p>
+        <p>Hà Lan có thai, nhưng gia đình Dũng không chấp nhận, Dũng ruồng bỏ Hà Lan và làm đám cưới với Bích Hoàng. Cô
+            đành gửi con về cho bà ngoại chăm sóc và đặt tên là Trà Long. Tuy hiểu rõ tình yêu của Ngạn dành cho mình,
+            Hà Lan vẫn không đáp lại vì cô hiểu rõ mình muốn sống theo một lối sống hoàn toàn khác với Ngạn. Bằng tình
+            yêu của mình dành cho Hà Lan, Ngạn hết lòng yêu thương và chăm sóc cho Trà Long. Trà Long lớn lên trở thành
+            cô giáo trường làng, và vô cùng yêu quý Ngạn. Trong khi ai cũng nghĩ rằng Trà Long sẽ là sự nối tiếp những
+            gì mà Hà Lan đã bỏ dở trong đời Ngạn, thì Ngạn quyết định ra đi vì anh nhận ra rằng Trà Long chỉ là cái bóng
+            của Hà Lan trong anh mà thôi.</p><br>
+        <hr>
+        <h5 id="viet_nam3">Tắt đèn</h5>
+        <p>Tắt đèn là một trong những tác phẩm văn học tiêu biểu nhất của nhà văn Ngô Tất Tố (tiểu thuyết, in trên báo
+            Việt nữ năm 1937).[1] Đây là một tác phẩm văn học hiện thực phê phán với nội dung nói về cuộc sống khốn khổ
+            của tầng lớp nông dân Việt Nam đầu thế kỉ XX dưới ách đô hộ của thực dân Pháp.</p>
+        <p> Tác phẩm kể về nhân vật chính là chị Dậu. Trước khi lấy chồng chị vốn có tên là Lê Thị Đào, một cô gái đẹp,
+            giỏi
+            giang, tháo vát và (theo nhà văn) sinh ra trong gia đình trung lưu.</p>
+        <p> Vốn lúc đầu, gia cảnh anh chị Dậu có dư giả, nhưng vì liền lúc mẹ và em trai anh Dậu cùng qua đời, anh chị
+            dù đã
+            hết sức cần kiệm nhưng vẫn phải tiêu quá nhiều tiền cho hai đám ma. Chưa hết, sau khi đám ma cho em trai
+            xong,
+            anh Dậu bỗng mắc bệnh sốt rét, không làm gì được, mọi vất vả dồn lên vai chị Dậu, khiến gia cảnh lâm vào
+            cảnh
+            'nhất nhì trong hạng cùng đinh' trong làng.</p>
+        <p>Mùa sưu đến, chị Dậu phải chạy vạy khắp nơi vay tiền để nộp cho chồng, nhưng không kiếm đâu ra. Anh Dậu dù bị
+            ốm
+            nhưng vẫn bị bọn cai lệ cùm kẹp lôi ra giam ở đình làng. Cuối cùng, bần cùng quá, chị buộc lòng phải dứt
+            ruột
+            bán đi cái Tí, đứa con gái đầu lòng 7 tuổi ngoan ngoãn, hiếu thảo và ổ chó mới đẻ chưa kịp mở mắt cho vợ
+            chồng
+            lão Nghị Quế bên thôn Đoài để lấy hai đồng nộp sưu. Nhưng vừa đủ tiền nộp xong suất sưu cho chồng, bọn cai
+            trong
+            làng lại ép chị nộp cả tiền sưu cho em trai anh Dậu với lý do chết ở năm ta nhưng lúc đó lịch năm tây đã
+            sang
+            năm mới. Vậy là anh Dậu vẫn bị bắt không được về nhà.</p>
+        <p> Nửa đêm, anh Dậu dở sống dở chết được đưa về. Được bà con lối xóm giúp đỡ, anh dần tỉnh lại. Một bà lão hàng
+            xóm
+            tốt bụng cho chị vay bát gạo nấu cháo để anh ăn lại sức. Nhưng vừa kề bát cháo lên miệng, bọn cai lệ và
+            người
+            nhà lí trưởng ập vào ép sưu. Chị Dậu ra sức van xin không được, cuối cùng uất ức quá không thể chịu được
+            nữa,
+            chị đã ra tay đánh cả cai lệ và tên người nhà lý trưởng.</p>
+        <p> Phạm tội đánh người nhà nước, chị bị thúc giải lên quan. Tên quan huyện lại là tên dâm ô, định ra tay sàm sỡ
+            chị. Chị bèn vứt tọt nắm bạc vào mặt hắn rồi vùng chạy.
+        </p>
+        <p>Sau đó, chị may mắn gặp một người nhà quan cụ trên tỉnh. Người này cho chị 2 đồng nộp nốt tiền sưu và hứa hẹn
+            cho chị công việc vắt sữa của mình để quan cụ uống (do quan cụ đã rụng hết răng không ăn được cơm). Chị bèn
+            về
+            bàn với anh Dậu, cho cái Tỉu làm con nuôi nhà hàng xóm, lên tỉnh làm việc.</p>
+        <p> Thời gian đầu, chị làm được tiền và gửi về cho anh Dậu. Nhưng vào một đêm tối, quan cụ mò vào buồng của chị
+            định
+            giở trò đồi bại với chị... Tác phẩm kết thúc bằng câu "Chị vùng chạy ra ngoài giữa lúc trời tối đen như mực,
+            đen
+            như cái tiền đồ của chị vậy!"</p>
+
+    </div>
+</div>
+<div id="to_top">
+    <a href="#main"><button><span class="material-symbols-outlined">expand_less</span></button></a>
+</div>
+<br>
+
+</body>
+</html>

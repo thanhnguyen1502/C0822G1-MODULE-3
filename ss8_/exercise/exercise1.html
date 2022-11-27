@@ -2,48 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Responsive Image Gallery</title>
     <link rel="stylesheet" href="../../bootstrap-5.1.3-dist/css/bootstrap.css">
-    <script src="../../bootstrap-5.1.3-dist/js/bootstrap.js"></script>
-
+    <link href="external.css" rel="stylesheet">
 </head>
 <body>
-<div>
-    <h1>Responsive Image Gallery</h1>
-    <p>Resize the browser window to see the effect.</p>
-</div>
-<div class="col-lg-12">
+<div class="p-3 style" >
+    <div><h2>Responsive Image Gallery</h2></div>
+    <div><h3>Resize the browser window to see the effect.</h3></div>
     <div class="row">
-        <div class="card" style="width: 400px; height: 100%">
-            <img src="../../picture/260465403_3029325710649610_1693762793161038971_n.jpg"/>
-            <div class="card-body">
-                <p class="card-text">Some quick content.</p>
+        <div class=" col-sm-6 col-md-3">
+            <div class="card" style="width: auto;">
+                <img src="img/1.jpg" class="card-img-top" alt="img_1">
+
+                <div class="card-body">
+                    <p class="card-text text-center">Đây là một hình ảnh.</p>
+                </div>
             </div>
         </div>
-        <div class="card" style="width: 400px; height: 100%">
-            <img src="../../picture/261272307_3029325700649611_668904388850969316_n.jpg"/>
-            <div class="card-body">
-                <p class="card-text">Somi quick content.</p>
+
+        <div class=" col-sm-6 col-md-3">
+            <div class="card" style="width: auto;">
+                <img src="img/2.jpg" class="card-img-top" alt="img_2">
+                <div class="card-body">
+                    <p class="card-text text-center">Đây cũng là một hình ảnh</p>
+                </div>
             </div>
         </div>
-        <div class="card" style="width: 340px; height: 100%">
-            <img src="../../picture/275056782_3094863237429190_3048248349182957438_n.jpg"/>
-            <div class="card-body">
-                <p class="card-text">Some quick content.</p>
+
+        <div class=" col-sm-6 col-md-3">
+            <div class="card" style="width: auto;">
+                <img src="img/3.jpg" alt="ing_3">
+                <div class="card-body">
+                    <p class="card-text text-center">Đây cũng là một hình ảnh</p>
+                </div>
             </div>
         </div>
-        <div class="card" style="width: 340px; height: 100%">
-            <img src="../../picture/275081672_3094863220762525_1934444467589633680_n.jpg"/>
-            <div class="card-body">
-                <p class="card-text">Some quick content.</p>
+
+        <div class=" col-sm-6 col-md-3 col-12">
+            <div class="card col-sm-6 col-md-3" style="width: auto">
+                <img src="img/4.jpg" alt="img_4">
+                <div class="card-body">
+                    <p class="card-text text-center">Đây cũng là một hình ảnh</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div>
-    <p>
-        This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).
-    </p>
+    <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px
+        wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by
+        side.
+        For screens smaller than 500px, the images will stack vertically (100%).</p>
 </div>
 </body>
+<script src="../../bootstrap-5.1.3-dist/js/bootstrap.js"></script>
 </html>
