@@ -108,3 +108,73 @@ VALUES ('1', '5', '2', '4'),
 ('6', '1', '1', '3'),
 ('7', '2', '1', '2'),
 ('8', '2', '12', '2');
+
+-- CREATE PROCEDURE find_customer(IN key_search VARCHAR(45))
+-- 	BEGIN
+	select c.id, 
+    ct.`name` as customer_type, 
+    c.`name`, 
+    c.date_of_birth, 
+    c.gender, 
+    c.id_card, 
+    c.phone_number,
+    c.email,
+    c.address 
+    from 
+	customer c join customer_type ct on c.id = ct.id 
+    where
+    ct.`name` like 'diamond';
+    
+    -- where
+-- 			c.`name` like concat("%", ngu, "%") 	;
+			-- OR 
+	-- 		c.id LIKE  concat("%", key_search, "%")
+-- 			OR  
+-- 			ct.`name` LIKE  concat("%", key_search, "%")
+-- 	END //
+-- DELIMITER ;
+
+
+	
+        -- 
+select c.id,
+		c.name AS customer_name,
+		c.date_of_birth,
+		c.gender,
+		c.id_card,
+		c.phone_number,
+		c.email,
+		c.address,
+        c.customer_type_id, 
+        ct.`name` as customer_type_name 
+ from customer c  join customer_type ct on c.id = ct.id where (c.gender = ? and c.`name` like '?%') or c.phone_number like '09%';
+
+	select * from customer;
+
+-- Câu 11: Hiển thị thông tin các dịch vụ đi kèm đã được sử dụng 
+-- bởi những khách hàng có "tên loại khách" là “Diamond” và có "địa chỉ" ở “Vinh” hoặc “Quảng Ngãi”.
+SELECT 
+		c.id,
+		c.name AS customer_name,
+		c.date_of_birth,
+		c.gender,
+		c.id_card,
+		c.phone_number,
+		c.email,
+		c.address,
+        c.customer_type_id,
+		ct.name AS customer_type
+	FROM
+		customer c
+			JOIN
+		customer_type ct ON c.customer_type_id = ct.id
+	WHERE
+		c.name LIKE  concat("%", key_search, "%") 
+			OR 
+        c.phone_number LIKE  concat("%", key_search, "%")
+			OR  
+        ct.name LIKE  concat("%", key_search, "%"); 
+        
+        select c.id, c.name AS customer_name, c.date_of_birth, c.gender, c.id_card, 
+        c.phone_number, c.email, c.address, c.customer_type_id,  ct.`name` as customer_type_name  from customer c 
+        join customer_type ct on c.id = ct.id where  c.`name` = 'Nguyễn Thị Hào' or c.id = 0;

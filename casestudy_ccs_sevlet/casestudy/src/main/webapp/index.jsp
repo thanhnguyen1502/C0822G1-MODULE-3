@@ -109,10 +109,13 @@
   </div>
 
   <div class="row mt-5">
-    <div class="col-lg-5">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/Pa8tN0u0Rr0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
     <div class="col-lg-7">
+<%--      <iframe width="100%" height="315" src="https://www.youtube.com/embed/Pa8tN0u0Rr0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--%>
+<%--      <iframe width="700" height="400" src="https://www.youtube.com/embed/OqdA6DKV1Fs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--%>
+<%--  <iframe width="700" height="400" src="https://www.youtube.com/embed/HXtp__5VLys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--%>
+  <iframe width="700" height="400" src="https://www.youtube.com/embed/S3YvgwfxJ68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-lg-5">
       <h5 class="text-warning" style="font-family: 'Times New Roman'">
         THIS WORLD CLASS RESORT, FURAMA DANANG, REPUTABLE FOR BEING A CULINARY RESORT IN VIETNAM
       </h5>
