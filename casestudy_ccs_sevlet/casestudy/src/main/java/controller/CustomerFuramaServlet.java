@@ -31,9 +31,6 @@ public class CustomerFuramaServlet extends HttpServlet {
             case "editCustomer":
                 showEditCustomerForm(request, response);
                 break;
-            case "employeeList":
-                showEmployeeListPage(request, response);
-                break;
             case "contractList":
                 showContractPage(request, response);
                 break;
@@ -173,17 +170,6 @@ public class CustomerFuramaServlet extends HttpServlet {
 
     private void showContractPage(HttpServletRequest request, HttpServletResponse response) {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/contract/list.jsp");
-        try {
-            requestDispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void showEmployeeListPage(HttpServletRequest request, HttpServletResponse response) {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/employee/list.jsp");
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {

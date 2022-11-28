@@ -2,44 +2,111 @@ package model.person;
 
 import java.time.LocalDate;
 
-public class Employee extends Person{
-    private String employeeID;
-    private String academyLevel;
+public class Employee{
+    private int id;
+    private String name;
+    private LocalDate birthday;
+    private String idCard;
+    private double salary;
+    private String phoneNumber;
+    private String email;
+    private String address;
     private String position;
-    private String salary;
+    private String education;
+    private String division;
 
     public Employee() {
     }
 
-    public Employee(String employeeID, String academyLevel, String position, String salary) {
-        this.employeeID = employeeID;
-        this.academyLevel = academyLevel;
+    public Employee(int id, String name, LocalDate birthday, String idCard, double salary, String phoneNumber, String email, String address, String position, String education, String division) {
+        this.id = id;
+        this.name = name;
+        this.birthday = birthday;
+        this.idCard = idCard;
+        this.salary = salary;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.address = address;
         this.position = position;
+        this.education = education;
+        this.division = division;
+    }
+
+    public Employee(String name, LocalDate birthday, String idCard, double salary, String phoneNumber, String email, String address, String position, String education, String division) {
+        this.name = name;
+        this.birthday = birthday;
+        this.idCard = idCard;
+        this.salary = salary;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.address = address;
+        this.position = position;
+        this.education = education;
+        this.division = division;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDate getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getIdCard() {
+        return idCard;
+    }
+
+    public void setIdCard(String idCard) {
+        this.idCard = idCard;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
-    public Employee(String name, LocalDate birthday, boolean gender, String id, String phoneNumber, String email, String employeeID, String academyLevel, String position, String salary) {
-        super(name, birthday, gender, id, phoneNumber, email);
-        this.employeeID = employeeID;
-        this.academyLevel = academyLevel;
-        this.position = position;
-        this.salary = salary;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public String getEmployeeID() {
-        return employeeID;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public void setEmployeeID(String employeeID) {
-        this.employeeID = employeeID;
+    public String getEmail() {
+        return email;
     }
 
-    public String getAcademyLevel() {
-        return academyLevel;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public void setAcademyLevel(String academyLevel) {
-        this.academyLevel = academyLevel;
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPosition() {
@@ -50,11 +117,19 @@ public class Employee extends Person{
         this.position = position;
     }
 
-    public String getSalary() {
-        return salary;
+    public String getEducation() {
+        return education;
     }
 
-    public void setSalary(String salary) {
-        this.salary = salary;
+    public void setEducation(String education) {
+        this.education = education;
+    }
+
+    public String getDivision() {
+        return division;
+    }
+
+    public void setDivision(String division) {
+        this.division = division;
     }
 }

@@ -60,7 +60,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="genderCustomer" class="form-label fw-bold">Customer Type:</label>
+                    <label for="genderCustomer" class="form-label fw-bold">Gender:</label>
                     <select name="genderCustomer" id="genderCustomer" class="form-select" aria-label="Default select example">
                         <c:if test="${customer.gender == false}">
                             <option value="false">Nữ</option>

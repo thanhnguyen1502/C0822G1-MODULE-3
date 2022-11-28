@@ -1,7 +1,7 @@
 <%--
   Created by IntelliJ IDEA.
   User: Admin
-  Date: 6/11/2022
+  Date: 26/11/2022
   Time: 11:31 PM
   To change this template use File | Settings | File Templates.
 --%>
@@ -149,14 +149,14 @@
 <!-- Modal delete -->
 <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <form action="/CustomerFurama?action=deleteCustomer" method="post">
+        <form action="/employeeFurama?action=deleteEmployee" method="post">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Delete Confirm</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <input type="text" hidden name="deleteCustomerId" id="deleteId">
+                    <input type="text" hidden name="deleteEmployeeId" id="deleteId">
                     Are you sure delete customer:
                     <span id="deleteName" class="fw-bold"></span>
                 </div>
@@ -169,8 +169,8 @@
     </div>
 </div>
 <script>
-    function deleteCustomer(name, customerId) {
-        document.getElementById("deleteId").value = customerId;
+    function deleteEmployee(name, id) {
+        document.getElementById("deleteId").value = id;
         document.getElementById("deleteName").innerText = name;
     }
 </script>
