@@ -3,7 +3,6 @@ package repository.impl;
 import model.person.Employee;
 import repository.IEmployeeRepository;
 
-import javax.servlet.RequestDispatcher;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,7 +23,6 @@ public class EmployeeRepository implements IEmployeeRepository {
             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
-
                 String name = resultSet.getString("name");
                 LocalDate birthDay = LocalDate.parse(resultSet.getString("date_of_birth"));
                 String idCard = resultSet.getString("id_card");

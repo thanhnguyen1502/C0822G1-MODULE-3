@@ -32,14 +32,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent1">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item navbar-brand">
-                            <a class="nav-link active text-light" aria-current="page" href="/HomeFurama">Home</a>
+                            <a class="nav-link active text-light" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item navbar-brand">
                             <a class="nav-link active text-light" aria-current="page"
                                href="/CustomerFurama">Customer</a>
                         </li>
                         <li class="nav-item navbar-brand">
-                            <a class="nav-link active text-light" aria-current="page" href="/ServiceFurama">Employee</a>
+                            <a class="nav-link active text-light" aria-current="page" href="/view/service/list.jsp">Employee</a>
                         </li>
                         <li class="nav-item navbar-brand">
                             <a class="nav-link active text-light" aria-current="page" href="/ServiceFurama">Service</a>
