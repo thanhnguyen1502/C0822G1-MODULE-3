@@ -13,7 +13,7 @@ public class CalculatorServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
-        String description = request.getParameter("description");
+//        String description = request.getParameter("description");
         double price = Double.parseDouble(request.getParameter("price"));
         double percent = Double.parseDouble(request.getParameter("percent"));
         double discountAmount = price * percent * 0.01;

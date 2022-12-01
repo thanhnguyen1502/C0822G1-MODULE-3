@@ -21,7 +21,6 @@ public class CustomerRepository implements ICustomerRepository {
             "c.phone_number, c.email, c.address, c.customer_type_id,  ct.`name` as customer_type_name  from customer c  " +
             "join customer_type ct on c.id = ct.id where  c.`name` = ? or c.phone_number = ?;";   //   or address =?;  or gender = ?
 
-
     @Override
     public List<Customer> selectAllCustomer() {
         List<Customer> customerList = new ArrayList<>();

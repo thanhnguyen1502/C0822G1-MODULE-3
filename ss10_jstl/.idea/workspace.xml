@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3e49003e-d13b-4ac5-b2e4-4cd0f04407d7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/build/classes/java/main/repository/impl/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/build/classes/java/main/repository/impl/CustomerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/build/classes/java/main/repository/impl/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/build/classes/java/main/repository/impl/EmployeeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/build/libs/casestudy-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/build/libs/casestudy-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/src/main/java/repository/impl/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/src/main/java/repository/impl/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/src/main/webapp/view/customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy_ccs_sevlet/casestudy/src/main/webapp/view/customer/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excrise2/calculation/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/excrise2/calculation/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excrise2/calculation/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/excrise2/calculation/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excrise2/calculation/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/excrise2/calculation/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excrise2/calculation/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/excrise2/calculation/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excrise2/calculation/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/excrise2/calculation/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excrise2/calculation/build/classes/java/main/controller/CalculationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/excrise2/calculation/build/classes/java/main/controller/CalculationServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excrise2/calculation/build/libs/calculation-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/excrise2/calculation/build/libs/calculation-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excrise2/calculation/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/excrise2/calculation/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excrise2/calculation/src/main/java/controller/CalculationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/excrise2/calculation/src/main/java/controller/CalculationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excrise2/calculation/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/excrise2/calculation/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excrise2/calculation/src/main/webapp/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/excrise2/calculation/src/main/webapp/result.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11/excise/excise1/src/main/java/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11/excise/excise1/src/main/java/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11/excise/excise1/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11/excise/excise1/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11/excise/excise1/src/main/webapp/view/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11/excise/excise1/src/main/webapp/view/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11/excise/excise1/src/main/webapp/view/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11/excise/excise1/src/main/webapp/view/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11/excise/excise1/src/main/webapp/view/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11/excise/excise1/src/main/webapp/view/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss9_web/exscise/exscise1/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss9_web/exscise/exscise1/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss9_web/exscise/exscise1/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss9_web/exscise/exscise1/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss9_web/exscise/exscise1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss9_web/exscise/exscise1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss9_web/exscise/exscise1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss9_web/exscise/exscise1/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss9_web/exscise/exscise1/src/main/java/CalculatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss9_web/exscise/exscise1/src/main/java/CalculatorServlet.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="2IFb73aaq8HDiX6ZgqPHgiuREcT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\C0422G1-NguyenVanThanh\4. module3\module3\ss10_jstl\src\main\webapp\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\C0422G1-NguyenVanThanh\4. module3\module3\ss10_jstl\src\main\webapp\img" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.68" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.68" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : org.example : excrise-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="9c4c85e1-9c52-4806-ad2e-97114bf90d30" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58630" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : org.example : excrise-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e49003e-d13b-4ac5-b2e4-4cd0f04407d7" name="Changes" comment="" />
+      <created>1669780113364</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669780113364</updated>
+      <workItem from="1669780116589" duration="3123000" />
+      <workItem from="1669790955663" duration="275000" />
+      <workItem from="1669791348237" duration="1319000" />
+      <workItem from="1669909612095" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

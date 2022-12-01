@@ -6,7 +6,7 @@ public class Product {
     private String producer;
     private double price;
     private String status;
-    private String Picture;
+    private String picture;
 
     public Product() {
     }
@@ -17,7 +17,7 @@ public class Product {
         this.producer = producer;
         this.price = price;
         this.status = status;
-        Picture = picture;
+        picture = picture;
     }
 
     public int getId() {
@@ -61,10 +61,10 @@ public class Product {
     }
 
     public String getPicture() {
-        return Picture;
+        return picture;
     }
 
     public void setPicture(String picture) {
-        Picture = picture;
+        picture = picture;
     }
 }

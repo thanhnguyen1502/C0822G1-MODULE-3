@@ -30,7 +30,6 @@
             <h1>Customer Management</h1>
         </div>
     </div>
-
     <div class="row mt-2">
         <div class="col-lg-12 d-flex justify-content-center align-items-center">
             <form action="/CustomerFurama?action=searchCustomer" method="post" class="d-flex">
