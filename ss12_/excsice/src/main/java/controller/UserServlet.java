@@ -34,6 +34,9 @@ public class UserServlet extends HttpServlet {
             case "sortByName":
               sortByName(request,response);
               break;
+            case "searchByCountry":
+                searchByCountry(request,response);
+                break;
             default:
                 listUser(request, response);
                 break;
@@ -68,8 +71,7 @@ public class UserServlet extends HttpServlet {
             case "edit":
                 updateUser(request,response);
                 break;
-            case "searchByCountry":
-                searchByCountry(request,response);
+
         }
     }
 

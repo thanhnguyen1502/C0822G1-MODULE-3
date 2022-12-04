@@ -21,7 +21,7 @@
     <h2>
         <a href="/UserServlet?action=create">Add New User</a>
     </h2>
-    <form action="/UserServlet?action=searchByCountry" method="post">
+    <form action="/UserServlet?action=searchByCountry" method="get">
         <input type="text" name="countrySearch" placeholder="search">
         <button type="submit">Search</button>
     </form>
@@ -50,6 +50,28 @@
             </tr>
         </c:forEach>
     </table>
+</div>
+<!-- Modal delete -->
+<div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="/UserServlet?action=deleteUser" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Confirm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" hidden name="deleteEmployeeId" id="deleteId">
+                    Are you sure delete customer:
+                    <span id="deleteName" class="fw-bold"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-close-white" data-bs-target="modal">Close</button>
+                    <button type="submit" class="btn btn-danger" id="confirm">Delete</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
 </body>
 </html>
