@@ -53,9 +53,7 @@ public class ServiceFuramaServlet extends HttpServlet {
             case "searchFacility":
                 searchFacility(request,response);
                 break;
-            default:
-                showServiceListPage(request, response);
-                break;
+
         }
     }
 
@@ -157,7 +155,7 @@ public class ServiceFuramaServlet extends HttpServlet {
     private void showServiceListPage(HttpServletRequest request, HttpServletResponse response) {
         List<Facility> facilityList =  facilityService.selectAllService();
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/facility/list.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/facility/list.jsp");
         request.setAttribute("facilityList",facilityList);
         try {
             requestDispatcher.forward(request, response);

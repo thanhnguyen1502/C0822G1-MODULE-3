@@ -138,7 +138,7 @@
 
 <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <form action="/CustomerFurama?action=deleteCustomer" method="post">
+        <form action="/EmployeeFurama?action=deleteEmployee" method="post">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Delete Confirm</h5>
@@ -150,14 +150,31 @@
                     <span id="deleteName" class="fw-bold"></span>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn-close-white" data-bs-target="modal">Close</button>
+                    <button type="submit" class="btn-close-white" data-bs-target="modal">Close</button>
                     <button type="submit" class="btn btn-danger" id="confirm">Delete</button>
                 </div>
             </div>
         </form>
     </div>
 </div>
-
+<script>
+    function deleteEmployee(name, id) {
+        document.getElementById("deleteId").value = id;
+        document.getElementById("deleteName").innerText = name;
+    }
+</script>
+<script src="jquery/jquery-3.5.1.min.js"></script>
+<script src="datatables/js/jquery.dataTables.min.js"></script>
+<script src="datatables/js/dataTables.bootstrap5.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#tableEmployee').dataTable({
+            "dom": 'lrtip',
+            "lengthChange": false,
+            "pageLength": 5
+        });
+    });
+</script>
 <%@ include file="/include/footer.jsp" %>
 </body>
 </html>

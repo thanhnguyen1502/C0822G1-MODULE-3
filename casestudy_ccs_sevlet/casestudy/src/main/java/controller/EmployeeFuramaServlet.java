@@ -22,6 +22,9 @@ public class EmployeeFuramaServlet extends HttpServlet {
             action = "";
         }
         switch (action) {
+            case "addEmployee0":
+//                showListAddEmployee(request,response);
+                break;
             default:
                 showEmployeeListPage(request,response);
         }
@@ -30,7 +33,25 @@ public class EmployeeFuramaServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+        if (action == null) {
+            action = "";
+        }
+        switch (action) {
+            case "deleteEmployee":
+                deleteEmployee(request,response);
+                break;
+        }
+    }
 
+    private void deleteEmployee(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("deleteEmployeeId"));
+        this.employeeService.deleteEmployee(id);
+        try {
+            response.sendRedirect("/EmployeeFurama");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

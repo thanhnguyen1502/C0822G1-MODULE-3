@@ -148,19 +148,19 @@
 <!-- Modal delete -->
 <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <form action="/employeeFurama?action=deleteEmployee" method="post">
+        <form action="/CustomerFurama?action=deleteCustomer" method="post">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Delete Confirm</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <input type="text" hidden name="deleteEmployeeId" id="deleteId">
+                    <input type="text" hidden name="deleteCustomerId" id="deleteId">
                     Are you sure delete customer:
                     <span id="deleteName" class="fw-bold"></span>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn-close-white" data-bs-target="modal">Close</button>
+                    <button type="submit" class="btn-close-white" data-bs-target="modal">Close</button>
                     <button type="submit" class="btn btn-danger" id="confirm">Delete</button>
                 </div>
             </div>
@@ -168,7 +168,7 @@
     </div>
 </div>
 <script>
-    function deleteEmployee(name, id) {
+    function deleteCustomer(name, id) {
         document.getElementById("deleteId").value = id;
         document.getElementById("deleteName").innerText = name;
     }

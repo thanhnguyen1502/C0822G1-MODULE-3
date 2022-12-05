@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FacilityRepository implements IFacilityRepository {
-    private final String SELECT_ALL_FACILITY = "select * from facility;";
+    private final String SELECT_ALL_FACILITY = "SELECT * FROM furama_management.facility;";
     private final String ADD_NEW_FACILITY = "CALL add_new_service(?,?,?,?,?,?,?,?,?,?,?);";
     private final String DELETE_FACILITY = "CALL delete_facility(?);";
     private final String FIND_FACILITY_BY_ID = "CALL find_facility_by_id(?);";
@@ -42,7 +42,8 @@ public class FacilityRepository implements IFacilityRepository {
                 String descriptionOtherConvenience = resultSet.getString("description_other_convenience");
                 int numberOfFloors = resultSet.getInt("number_of_floor");
                 String freeServiceIncluded = resultSet.getString("facility_free");
-                facility = new Facility(id, serviceName, usableArea, cost, maxPeople, rentTypeId, serviceTypeId, roomStandard,
+
+                    facility = new Facility(id, serviceName, usableArea, cost, maxPeople, rentTypeId, serviceTypeId, roomStandard,
                         descriptionOtherConvenience, poolArea, numberOfFloors, freeServiceIncluded);
                 facilityList.add(facility);
             }
