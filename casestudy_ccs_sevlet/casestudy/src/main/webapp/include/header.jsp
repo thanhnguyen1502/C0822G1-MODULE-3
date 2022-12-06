@@ -41,7 +41,7 @@
                             <a class="nav-link active text-light" aria-current="page" href="/EmployeeFurama">Employee</a>
                         </li>
                         <li class="nav-item navbar-brand">
-                            <a class="nav-link active text-light" aria-current="page" href="/view/facility/list.jsp">Service</a>
+                            <a class="nav-link active text-light" aria-current="page" href="/ServiceFurama">Service</a>
                         </li>
                         <li class="nav-item navbar-brand">
                             <a class="nav-link active text-light" aria-current="page" href="/view/contract/list.jsp">Contract</a>

@@ -41,6 +41,16 @@
                 </tr>
                 </thead>
                 <tbody>
+                <c:forEach items="${contractList}" var="contract" varStatus="status">
+                    <tr>
+                        <td>${status.count}</td>
+                        <td>${contract.contractID}</td>
+                        <td>${contract.startDate}</td>
+                        <td>${contract.endDate}</td>
+                        <td>${contract.deposit}</td>
+                        <td>${contract.totalBill}</td>
+                    </tr>
+                </c:forEach>
                 <tr>
                     <th scope="row">1</th>
                     <td>Mark</td>

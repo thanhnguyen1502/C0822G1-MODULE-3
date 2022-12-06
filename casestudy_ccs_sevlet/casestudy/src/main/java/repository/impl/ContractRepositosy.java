@@ -4,7 +4,9 @@ import model.Contract;
 import repository.IContractRepository;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ContractRepositosy implements IContractRepository {
@@ -19,17 +21,19 @@ public class ContractRepositosy implements IContractRepository {
             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
-//                String contractID, LocalDate startDate, java.time.LocalDate endDate, double deposit, int totalBill
-                String contractID = resultSet.getString("");
-                Date startDate = resultSet.getDate("");
-                String endDate = resultSet.getString("");
-                double deposit = resultSet.getDouble("");
-                int totalBill = resultSet.getInt("");
+                String contractID = resultSet.getString("id");
+                Date startDate = resultSet.getDate("start_date");
+                Date endDate = resultSet.getDate("end_date");
+                double deposit = resultSet.getDouble("deposit");
+                int totalBill = resultSet.getInt("employee_id");
+
+                contract = new Contract(contractID,startDate,endDate,deposit,totalBill);
+                contractList.add(contract);
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return contractList;
     }
 }

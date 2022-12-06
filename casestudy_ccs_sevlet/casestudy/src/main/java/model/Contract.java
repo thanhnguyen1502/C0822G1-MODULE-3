@@ -1,19 +1,27 @@
 package model;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Contract {
     private String contractID;
-    private LocalDate startDate;
-    private LocalDate endDate;
+    private Date startDate;
+    private Date endDate;
     private double deposit;
     private int totalBill;
 
     public Contract() {
     }
 
-    public Contract(String contractID, LocalDate startDate, LocalDate endDate, double deposit, int totalBill) {
+    public Contract(String contractID, Date startDate, Date endDate, double deposit, int totalBill) {
         this.contractID = contractID;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.deposit = deposit;
+        this.totalBill = totalBill;
+    }
+
+    public Contract(Date startDate, Date endDate, double deposit, int totalBill) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.deposit = deposit;
@@ -28,19 +36,19 @@ public class Contract {
         this.contractID = contractID;
     }
 
-    public LocalDate getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDate startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDate getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDate endDate) {
+    public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
 

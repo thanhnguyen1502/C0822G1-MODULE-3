@@ -32,11 +32,11 @@ public class FacilityRepository implements IFacilityRepository {
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String serviceName = resultSet.getString("name");
-                int usableArea = resultSet.getInt("usable_area");
+                int usableArea = resultSet.getInt("area");
                 double cost = resultSet.getDouble("cost");
                 int maxPeople = resultSet.getInt("max_people");
-                String rentTypeId = resultSet.getString("rent_type");
-                String serviceTypeId = resultSet.getString("service_type");
+                String rentTypeId = resultSet.getString("rent_type_id");
+                String serviceTypeId = resultSet.getString("facility_type_id");
                 String roomStandard = resultSet.getString("standard_room");
                 double poolArea = resultSet.getDouble("pool_area");
                 String descriptionOtherConvenience = resultSet.getString("description_other_convenience");
