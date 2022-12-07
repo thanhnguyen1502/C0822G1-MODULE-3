@@ -22,7 +22,6 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-lg-3"></div>
-
         <div style="background: #e9f2ef" class="col-lg-6 shadow-lg">
             <form action="/CustomerFurama?action=updateCustomer&id=${customer.customerID}" method="post">
                 <div class="mb-5 mt-3 text-center">

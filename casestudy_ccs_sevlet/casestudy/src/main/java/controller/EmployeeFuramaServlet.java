@@ -8,6 +8,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,13 +23,15 @@ public class EmployeeFuramaServlet extends HttpServlet {
             action = "";
         }
         switch (action) {
-            case "addEmployee0":
-//                showListAddEmployee(request,response);
+            case "addNewEmployee":
+                showAddEmployee(request,response);
                 break;
             default:
                 showEmployeeListPage(request,response);
         }
     }
+
+
 
 
     @Override
@@ -41,6 +44,33 @@ public class EmployeeFuramaServlet extends HttpServlet {
             case "deleteEmployee":
                 deleteEmployee(request,response);
                 break;
+            case "addNewEmployee":
+                addNewEmployee(request, response);
+                break;
+        }
+    }
+    private void addNewEmployee(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("nameOfEmployee");
+        LocalDate birthDay = LocalDate.parse(request.getParameter("dateOfBirth"));
+        String idCard = request.getParameter("idCard");
+        double salary = Double.parseDouble(request.getParameter("salary"));
+        String phoneNumber =request.getParameter("numberPhone");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+        String position = request.getParameter("position");
+        String education = request.getParameter("educationDegree");
+        String division = request.getParameter("division");
+        Employee employee = new Employee(name,birthDay,idCard,salary,phoneNumber,email,address,position,education,division);
+        this.employeeService.addNewEmployee(employee);
+
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/employee/list.jsp");
+        request.setAttribute("message", "successfully added new");
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -62,6 +92,16 @@ public class EmployeeFuramaServlet extends HttpServlet {
         request.setAttribute("employeeList", employeeList);
         try {
             requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void showAddEmployee(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/employee/list.jsp");
+        try {
+            requestDispatcher.forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {

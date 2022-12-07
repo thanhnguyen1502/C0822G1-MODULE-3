@@ -18,4 +18,9 @@ public class EmployeeService implements IEmployeeService {
     public boolean deleteEmployee(int id) {
         return employeeRepository.deleteEmployee(id);
     }
+
+    @Override
+    public void addNewEmployee(Employee employee) {
+        employeeRepository.addNewEmployee(employee);
+    }
 }

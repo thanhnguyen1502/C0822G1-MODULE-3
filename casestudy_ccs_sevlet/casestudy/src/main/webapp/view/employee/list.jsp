@@ -80,8 +80,9 @@
                     <th>Divition</th>
                     <th scope="col"></th>
                     <th scope="col">
-                        <button onclick="location.href='/EmployeeFurama?action=addNewEmployee'" type="button"
-                                class="btn btn-success me-2">
+                        <!-- Button Create Employee modal -->
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#createModal">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                  class="bi bi-cloud-plus" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -175,6 +176,87 @@
         });
     });
 </script>
+
+<!-- Modal create -->
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabelCreate">Enter Employee Information</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/EmployeeFurama?action=addNewEmployee" method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nameOfEmployee" class="form-label"><b>Name: </b></label>
+                        <input name="nameOfEmployee" type="text" class="form-control" id="nameOfEmployee" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="dateOfBirth" class="form-label"><b>Date of Birht:</b></label>
+                        <input name="dateOfBirth" type="date" class="form-control" id="dateOfBirth">
+                    </div>
+                    <div class="mb-3">
+                        <label for="idCard" class="form-label"><b>Id Card:</b></label>
+                        <input  name="idCard"type="text" class="form-control" id="idCard">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label"><b>Email:</b></label>
+                        <input  name="email" type="email" class="form-control" id="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="numberPhone" class="form-label"><b>Number Phone:</b></label>
+                        <input  name="numberPhone"type="numberPhone" class="form-control" id="numberPhone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label"><b>Address:</b></label>
+                        <input  name="address"type="address" class="form-control" id="address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="educationDegree" class="form-label"><b>Education Degree:</b></label>
+                        <select name="educationDegree" id="educationDegree" class="form-select" aria-label="Default select example">
+                            <option selected>select education degree</option>
+                            <option value="1">Trung Cấp</option>
+                            <option value="2">Cao Đẳng</option>
+                            <option value="3">Đại Học</option>
+                            <option value="4">Sau Đại Học</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="position" class="form-label"><b>Position:</b></label>
+                        <select  name="position" id="position" class="form-select" aria-label="Default select example">
+                            <option selected>select position</option>
+                            <option value="1">Lễ Tân</option>
+                            <option value="2">Phục vụ</option>
+                            <option value="3">Chuyên Viên</option>
+                            <option value="4">Giám Sát</option>
+                            <option value="5">Quản Lý</option>
+                            <option value="6">Giám ĐỐc</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="division" class="form-label"><b>Division:</b></label>
+                        <select  name="division" id="division" class="form-select" aria-label="Default select example">
+                            <option selected>select division</option>
+                            <option value="1">Sale – Marketing</option>
+                            <option value="2">Hành Chính</option>
+                            <option value="3">Phục Vụ</option>
+                            <option value="4">Quản Lý</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="salary" class="form-label"><b>Salary:</b></label>
+                        <input  name="salary" type="number" class="form-control" id="salary">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Add New</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <%@ include file="/include/footer.jsp" %>
 </body>
 </html>

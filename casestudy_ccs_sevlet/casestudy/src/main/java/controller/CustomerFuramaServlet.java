@@ -138,13 +138,10 @@ public class CustomerFuramaServlet extends HttpServlet {
         String idCard = request.getParameter("idCard");
         String phoneNumber =request.getParameter("phoneCustomer");
         String email = request.getParameter("emailCustomer");
-
         String customerType = request.getParameter("customerType");
         String address = request.getParameter("customerAddress");
         Customer customer = new Customer(name, birthDay, gender, idCard, phoneNumber, email, customerType, address);
-
         this.customerService.addNewCustomer(customer);
-
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/create.jsp");
         request.setAttribute("message", "successfully added new");
         try {
@@ -154,6 +151,7 @@ public class CustomerFuramaServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        showCustomerListPage(request, response);
     }
 
     private void showAddNewCustomerForm(HttpServletRequest request, HttpServletResponse response) {

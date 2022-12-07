@@ -32,7 +32,8 @@ public class Employee{
         this.division = division;
     }
 
-    public Employee(String name, LocalDate birthday, String idCard, double salary, String phoneNumber, String email, String address, String position, String education, String division) {
+    public Employee(String name, LocalDate birthday, String idCard, double salary, String phoneNumber, String email, String address,
+                    String position, String education, String division) {
         this.name = name;
         this.birthday = birthday;
         this.idCard = idCard;
