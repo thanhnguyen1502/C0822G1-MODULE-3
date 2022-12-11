@@ -14,6 +14,7 @@ import java.util.List;
 
 @WebServlet(name = "ServiceFuramaServlet", value = "/ServiceFurama")
 public class ServiceFuramaServlet extends HttpServlet {
+
     private IFacitityService facilityService = new FacilityService();
 
     @Override
@@ -30,6 +31,8 @@ public class ServiceFuramaServlet extends HttpServlet {
             case "editFacility":
                 showEditFacilityForm(request,response);
                 break;
+            case "deleteFacility":
+                deleteFacility(request,response);
             default:
                 showServiceListPage(request, response);
                 break;

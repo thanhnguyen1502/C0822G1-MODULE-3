@@ -82,7 +82,6 @@
                     <option value="4">hour</option>
                 </select>
             </div>
-
             <div class="mb-3" id="opt1" style="display: none">
                 <label for="roomStandard" class="form-label"><b>Room Standard:</b></label>
                 <select id="roomStandard" class="form-select" aria-label="Default select example">

@@ -51,8 +51,8 @@
                     <th scope="col">Area</th>
                     <th scope="col">Cost</th>
                     <th scope="col">Max People</th>
-                    <th scope="col">Rent Style ID</th>
-                    <th scope="col">Facility Type ID</th>
+                    <th scope="col">Rent Style</th>
+                    <th scope="col">Facility Type</th>
                     <th scope="col">More</th>
                     <th scope="col"></th>
                     <th scope="col">

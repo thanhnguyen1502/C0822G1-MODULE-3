@@ -10,8 +10,8 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="/common/bootstrap-5.0.2-dist/css/bootstrap.css">
     <%--Link Phân Trang--%>
+    <link rel="stylesheet" href="/common/bootstrap-5.0.2-dist/css/bootstrap.css">
     <link rel="stylesheet" href="datatables/css/dataTables.bootstrap5.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -175,6 +175,8 @@
 </script>
 
 <%--phân trang--%>
+<link rel="stylesheet" href="/common/bootstrap-5.0.2-dist/css/bootstrap.css">
+<link rel="stylesheet" href="datatables/css/dataTables.bootstrap5.min.css"/>
 <script src="jquery/jquery-3.5.1.min.js"></script>
 <script src="datatables/js/jquery.dataTables.min.js"></script>
 <script src="datatables/js/dataTables.bootstrap5.min.js"></script>
