@@ -219,7 +219,6 @@
                             <option value="3">Room</option>
                         </select>
                     </div>
-
                     <div class="mb-3">
                         <label for="attachService" class="form-label fw-bold">Attach Service:</label>
                         <select id="attachService" class="form-select" aria-label="Default select example">
