@@ -71,7 +71,8 @@ CREATE TABLE furama_management.employee (
     position_id INT,
     education_degree_id INT,
     division_id INT,
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    `status` bit(1) default 1
 );
 
 -- Khách hàng --
@@ -109,7 +110,10 @@ CREATE TABLE furama_management.facility (
     pool_area DOUBLE,
     number_of_floor INT,
     facility_free TEXT,
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+	foreign key (rent_type_id) references rengt_type(id),
+    foreign key (facility_type_id) references facility_type(id),
+    `status` bit(1) default 1
 );
 
 -- Hợp đồng --

@@ -62,6 +62,7 @@ CREATE TABLE phieu_nhap (
     ngay_nhap DATE
 );
 
+
 CREATE TABLE chi_tiet_phieu_nhap (
     dg_nhap DOUBLE,
     sl_nhap INT,

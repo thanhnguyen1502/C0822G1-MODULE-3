@@ -5,6 +5,7 @@ CREATE TABLE Class (
     id INT,
     `name` VARCHAR(50)
 );
+
 CREATE TABLE Student (
     id INT,
     `name` VARCHAR(55),
@@ -14,6 +15,7 @@ CREATE TABLE Student (
 
 alter table Class 
 add primary key (id);
+
 
 alter table class 
 change column `id` `id` int not null auto_increment;
