@@ -91,10 +91,3 @@ CREATE TABLE import_invoice_detail (
     FOREIGN KEY (material_id)
         REFERENCES import_invoice (id)
 );
-
-
-
-
-
-
-

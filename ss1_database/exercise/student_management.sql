@@ -2,29 +2,29 @@ DROP DATABASE IF EXISTS student_management;
 CREATE DATABASE student_management;
 USE student_management;
 
-CREATE TABLE Class (
+CREATE TABLE class (
     id INT,
     `name` VARCHAR(50)
 );
 
-CREATE TABLE Student (
+CREATE TABLE student (
     id INT,
     `name` VARCHAR(55),
     age TINYINT,
     country VARCHAR(40)
 );
 
-ALTER TABLE Class 
+ALTER TABLE class 
 ADD PRIMARY KEY (id);
 
 
-ALTER TABLE Class 
+ALTER TABLE class 
 CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT;
 
-ALTER TABLE Class 
+ALTER TABLE class 
 CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT;
 
-ALTER TABLE Class 
+ALTER TABLE class 
 ADD PRIMARY KEY (id), 
 CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT;
 
