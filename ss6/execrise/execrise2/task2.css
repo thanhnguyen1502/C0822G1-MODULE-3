@@ -1,0 +1,27 @@
+h1 {
+    font-size: 50px
+}
+
+.text {
+    text-indent: 50px;
+    font-size: x-large
+}
+
+.link {
+    color: blue;
+    text-decoration: none;
+}
+
+.sup {
+    color: blue;
+    font-size: 7pt;
+}
+
+#wiki {
+    font-size: large;
+}
+
+#link {
+    color: dodgerblue;
+    text-decoration: none;
+}
