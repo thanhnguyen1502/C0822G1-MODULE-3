@@ -63,6 +63,10 @@ body {
     padding: 10%;
 }
 
+.v {
+    background-color:  white;
+}
+
 #footer {
     bottom: 0;
     left: 0;
