@@ -13,7 +13,7 @@ header img{
 
 header,nav,footer{
     border-radius: 5px;
-    background: gray;
+    background: #6c757d;
     box-shadow: #333131 5px 5px;
     margin: 10px 0;
 }
