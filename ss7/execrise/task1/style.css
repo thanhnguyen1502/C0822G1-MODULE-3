@@ -46,16 +46,16 @@ body {
     padding: 15px;
 }
 
-#aside1 {
+#sidebar-left {
     text-align: center;
     background-color: darkgrey;
     color: rgba(16,26,246,0.71);
 }
-#aside2 {
+#sidebar-right {
     text-align: center;
     background-color: darkgrey;
 }
-#aside2 p {
+#sidebar-right p {
     border: 1px solid;
     margin: 20%;
     height: 20%;
