@@ -7,18 +7,17 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
     <title>home</title>
-  </head>
-  <body>
+</head>
+<body>
 <div>
-  <ul>
-    <li>
-      <a href="/">HOME</a>
-      <a href="/customer">Customer</a>
-    </li>
-  </ul>
+    <ul>
+        <li>
+            <a href="/">HOME</a>
+            <a href="/customer">Customer</a>
+        </li>
+    </ul>
 </div>
-
-  </body>
+</body>
 </html>

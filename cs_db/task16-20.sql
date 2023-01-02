@@ -75,9 +75,7 @@ WHERE
         HAVING SUM(hdct.so_luong) > 10);
 SET sql_safe_updates = 1;
 
-
-
--- Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống,
+-- 20 Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống,
 --  thông tin hiển thị bao gồm id (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi.
 SELECT 
     ma_nhan_vien AS id,
@@ -97,5 +95,3 @@ UNION SELECT
     dia_chi
 FROM
     khach_hang;
-
- 
