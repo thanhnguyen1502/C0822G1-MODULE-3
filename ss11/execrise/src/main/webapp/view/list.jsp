@@ -22,6 +22,10 @@
 </head>
 <body>
 <h1>Product Management</h1>
+<form action="/Products?action=findByName" method="post"  class="d-flex">
+    <input type="text" name="name" id="name" class="form-control me-2" placeholder="Search" aria-label="Search">
+    <button class="btn btn-secondary" type="submit">Search</button>
+</form>
 <div>
     <table id="tableCustomer" class="table">
         <tr class="table-success">
@@ -49,13 +53,12 @@
                     </button>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-success">Edit</button>
+                    <button type="button" class="btn btn-success" onclick="location.href='/Products?action=update'">Edit</button>
                 </td>
             </tr>
         </c:forEach>
     </table>
 </div>
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

@@ -31,7 +31,7 @@ public class ProductRepository implements IProductRepository {
 
     @Override
     public Product findById(int id) {
-        return null;
+        return  productMap.get(id);
     }
 
     @Override
