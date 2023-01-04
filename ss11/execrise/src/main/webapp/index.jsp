@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
   <head>
     <title>index</title>
@@ -16,28 +18,6 @@
             crossorigin="anonymous"></script>
   </head>
   <body>
-  <div>
-<ul>
-  <li>
-    <a href="/Products" class="btn btn-danger">Home</a>
-  </li>
-   <li>
-    <a href="/Products?action=list">List</a>
-  </li>
-   <li>
-    <a href="/Products?action=create">Add</a>
-  </li>
-   <li>
-    <a href="/Products?action=edit">Edit</a>
-  </li>
-
-</ul>
-  </div>
-<%--  <ul>--%>
-<%--  <li type="button" class="btn btn-success">List</li>--%>
-<%--  <button type="button" class="btn btn-danger">Add</button>--%>
-<%--  <button type="button" class="btn btn-warning">Create</button>--%>
-<%--  <button type="button" class="btn btn-info">Home</button>--%>
-<%--  </ul>--%>
+  <c:redirect url="/Products"></c:redirect>
   </body>
 </html>
