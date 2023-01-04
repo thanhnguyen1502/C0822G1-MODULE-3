@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32911220-5aac-41e7-8eec-f5ba892d6142" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../cs_web/src/main/webapp/view/employee/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../cs_web/src/main/webapp/view/employee/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss11/execrise/src/main/java/Repository/impl/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11/execrise/src/main/java/Repository/impl/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss11/execrise/src/main/webapp/view/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11/execrise/src/main/webapp/view/edit.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="32911220-5aac-41e7-8eec-f5ba892d6142" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../execrisee" />
   </component>
   <component name="RunManager" selected="Gradle.execrise [dependencies]">
     <configuration name="execrise [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -95,6 +91,7 @@
       <updated>1672802220588</updated>
       <workItem from="1672802224618" duration="48000" />
       <workItem from="1672802394880" duration="121000" />
+      <workItem from="1672814045573" duration="76000" />
     </task>
     <servers />
   </component>
@@ -111,5 +108,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

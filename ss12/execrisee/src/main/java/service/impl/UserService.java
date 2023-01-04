@@ -17,8 +17,8 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public boolean insertUser(User user) throws SQLException {
-        return false;
+    public boolean insertUser(User user ){
+        return userRepository.insertUser(user);
     }
 
     @Override
@@ -28,7 +28,7 @@ public class UserService implements IUserService {
 
     @Override
     public boolean deleteUser(int id) throws SQLException {
-        return false;
+        return userRepository.deleteUser(id);
     }
 
     @Override

@@ -20,6 +20,7 @@
 </head>
 <body>
 <div>
+    <h1 class="text-center">User Management</h1>
     <table class="table table-dark table-hover">
         <tr>
             <th>No.</th>
@@ -27,23 +28,51 @@
             <th>Email</th>
             <th>Address</th>
             <th></th>
-            <th></th>
+            <th>
+                <a href="/UserServlet?action=create">Create</a>
+            </th>
         </tr>
-        <c:forEach var="user" items="${userList}">
+        <c:forEach var="user" items="${userList}" varStatus="status">
             <tr class="table-light">
-                <td>${user.id}</td>
+                <td>${status.count}</td>
                 <td>${user.name}</td>
                 <td>${user.email}</td>
                 <td>${user.country}</td>
                 <td>
-                <td>
                     <a href="/UserServlet?action=edit&id=${user.id}">Edit</a>
-                    <a href="/UserServlet?action=delete&id=${user.id}">Delete</a>
                 </td>
+                <td>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            onclick="location.href='/UserServlet?action=delete&id=${user.id}'">
+                        Delete
+                    </button>
                 </td>
             </tr>
         </c:forEach>
     </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="/UserServlet?action=delete" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    want to delete
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                    <button type="submit" class="btn btn-primary">Delete</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
 </div>
 </body>
 </html>
