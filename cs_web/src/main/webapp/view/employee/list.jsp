@@ -148,5 +148,9 @@
         </div>
     </div>
 </div>
+
+<%@ include file="/include/footer.jsp" %>
+<script src="/common/popper.min.js"></script>
+<script src="/common/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 </body>
 </html>

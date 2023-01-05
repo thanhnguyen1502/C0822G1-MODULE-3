@@ -23,7 +23,7 @@ public class UserService implements IUserService {
 
     @Override
     public User selectUser(int id) {
-        return null;
+        return userRepository.selectUser(id);
     }
 
     @Override
@@ -37,8 +37,8 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public List<User> SearchByCountry(String CountrySearch) {
-        return null;
+    public List<User> searchByCountry(String countrySearch) {
+        return userRepository.searchByCountry(countrySearch);
     }
 
     @Override

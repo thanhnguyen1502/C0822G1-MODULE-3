@@ -33,6 +33,7 @@ public class UserServlet extends HttpServlet {
                 break;
             case "sortByName":
                 sortByName(request,response);
+                break;
             default:
                 showListUser(request, response);
                 break;
@@ -80,8 +81,26 @@ public class UserServlet extends HttpServlet {
             case "delete":
                 deleteUser(request, response);
                 break;
+            case "searchByCountry":
+                searchByCountry(request,response);
+        }
+
+    }
+
+    private void searchByCountry(HttpServletRequest request, HttpServletResponse response) {
+        String countrySearch = request.getParameter("countrySearch");
+        List<User> userList = userService.searchByCountry(countrySearch);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/list.jsp");
+        request.setAttribute("userList", userList);
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
+
     private void showNewForm(HttpServletRequest request, HttpServletResponse response) {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/create.jsp");
         try {

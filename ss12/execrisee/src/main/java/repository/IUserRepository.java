@@ -11,6 +11,6 @@ public interface IUserRepository {
     User selectUser(int id);
     boolean deleteUser(int id) throws SQLException;
     boolean updateUser(User user) throws SQLException;
-    List<User> SearchByCountry(String CountrySearch);
+    List<User> searchByCountry(String countrySearch);
     List<User> sortByName();
 }

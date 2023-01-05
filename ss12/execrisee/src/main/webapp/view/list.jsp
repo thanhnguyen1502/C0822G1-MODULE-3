@@ -19,15 +19,28 @@
 
 </head>
 <body>
-<div>
+<center>
     <h1 class="text-center">User Management</h1>
+    <h2>
+        <form action="/UserServlet?action=searchByCountry" method="post">
+            <input type="text" name="countrySearch" placeholder="search">
+            <button type="submit" >Search</button>
+        </form>
+    </h2>
+</center>
+
+
+<div>
+
     <table class="table table-dark table-hover">
         <tr>
             <th>No.</th>
             <th>Name</th>
             <th>Email</th>
             <th>Address</th>
-            <th></th>
+            <th>
+                <button onclick="location.href='/UserServlet?action=sortByName'" type="submit">Sort Name</button>
+            </th>
             <th>
                 <a href="/UserServlet?action=create">Create</a>
             </th>
