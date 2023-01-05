@@ -43,6 +43,6 @@ public class UserService implements IUserService {
 
     @Override
     public List<User> sortByName() {
-        return null;
+        return userRepository.sortByName();
     }
 }
