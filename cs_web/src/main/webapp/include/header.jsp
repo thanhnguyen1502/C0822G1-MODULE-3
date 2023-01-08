@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="common/bootstrap-5.0.2-dist/css/bootstrap.css">
 </head>
 <body>
+
 <nav class="navbar navbar-light bg-light">
     <div class="container">
-        <a href="http://localhost:8080/" class="navbar-brand">
+        <a
+                href="http://localhost:8080/">
             <img src="https://furamavietnam.com/wp-content/uploads/2018/10/logo.png" alt="" width="90" height="100">
         </a>
         <b class="text-end">
@@ -22,6 +24,7 @@
         </b>
     </div>
 </nav>
+
 <div class="row bg-success sticky-top">
     <div class="col-lg-3"></div>
     <div class="col-lg-6 d-flex justify-content-center">
@@ -55,4 +58,5 @@
 <script src="common/popper.min.js"></script>
 <script src="common/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 </body>
+
 </html>

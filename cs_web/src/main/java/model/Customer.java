@@ -28,6 +28,7 @@ public class Customer {
         this.address = address;
     }
 
+
     public String getName() {
         return name;
     }
@@ -99,4 +100,5 @@ public class Customer {
     public void setAddress(String address) {
         this.address = address;
     }
+
 }
